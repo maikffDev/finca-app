@@ -1,4 +1,4 @@
 package com.finca.app.insfraestructure.entities;
 
-public class HorarioEntity {
+public class HourHandEntity {
 }

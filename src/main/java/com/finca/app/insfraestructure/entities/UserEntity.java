@@ -4,10 +4,13 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 public class UserEntity {
 
     @Id
@@ -30,5 +33,8 @@ public class UserEntity {
     @ManyToOne
     @JoinColumn(name = "rol_id")
     private RoleEntity rolId;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<CommentaryEntity> comments = new ArrayList<>();
 
 }
