@@ -5,12 +5,12 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class Usuario {
-    private int usuarioId;
+public class User {
+    private Long userId;
     private String nombre;
     private String correo;
     private String contrasena;
     private int intFallidosIngreso;
-    private int activo;
-    private boolean rolId;
+    private boolean activo;
+    private boolean rollId;
 }
