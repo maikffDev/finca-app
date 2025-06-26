@@ -3,31 +3,37 @@ import com.finca.app.domain.models.Reservation;
 import com.finca.app.domain.ports.in.reservation.CreateReservationUseCase;
 import com.finca.app.domain.ports.in.reservation.DeleteReservationUseCase;
 import com.finca.app.domain.ports.in.reservation.FindReservationUseCase;
-import com.finca.app.domain.ports.in.reservation.UpdateReservationUseCase;
+import com.finca.app.domain.ports.in.reservation.UpDateReservationUseCase;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 
+
 @Service
-public class ReservationModelService implements CreateReservationUseCase, DeleteReservationUseCase, UpdateReservationUseCase, FindReservationUseCase {
+public class ReservationModelService implements CreateReservationUseCase, DeleteReservationUseCase, UpDateReservationUseCase, FindReservationUseCase {
 
     private final CreateReservationUseCase createReservationUseCase;
     private final DeleteReservationUseCase deleteReservationUseCase;
-    private final UpdateReservationUseCase updateReservationUseCase;
+    private final UpDateReservationUseCase upDateReservationUseCase;
     private final FindReservationUseCase findReservationUseCase;
 
-    public ReservationModelService(CreateReservationUseCase createReservationUseCase, DeleteReservationUseCase deleteReservationUseCase, UpdateReservationUseCase updateReservationUseCase, FindReservationUseCase findReservationUseCase) {
+    public ReservationModelService(CreateReservationUseCase createReservationUseCase, DeleteReservationUseCase deleteReservationUseCase, UpDateReservationUseCase upDateReservationUseCase, FindReservationUseCase findReservationUseCase) {
         this.createReservationUseCase = createReservationUseCase;
         this.deleteReservationUseCase = deleteReservationUseCase;
-        this.updateReservationUseCase = updateReservationUseCase;
+        this.upDateReservationUseCase = upDateReservationUseCase;
         this.findReservationUseCase = findReservationUseCase;
     }
 
     @Override
-    public Reservation create(Reservation Reservation) {
-        return createReservationUseCase.create(Reservation);
+    public Reservation update(Reservation reservation) {
+        return upDateReservationUseCase.update(reservation);
+    }
+
+    @Override
+    public Reservation create(Reservation reservation) {
+        return createReservationUseCase.create(reservation);
     }
 
     @Override
@@ -36,8 +42,8 @@ public class ReservationModelService implements CreateReservationUseCase, Delete
     }
 
     @Override
-    public Reservation logicalDeletion(Reservation Reservation) {
-        return deleteReservationUseCase.logicalDeletion(Reservation);
+    public Reservation logicalDeletion(Reservation reservation) {
+        return deleteReservationUseCase.logicalDeletion(reservation);
     }
 
     @Override
@@ -53,11 +59,5 @@ public class ReservationModelService implements CreateReservationUseCase, Delete
     @Override
     public Optional<Reservation> getByUserID(Long userID) {
         return findReservationUseCase.getByUserID(userID);
-    }
-
-
-    @Override
-    public Optional<Reservation> getById(Long id) {
-        return reservationModelPort.findByUserId(id);
     }
 }

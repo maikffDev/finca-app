@@ -3,13 +3,16 @@ package com.finca.app.application.mappers;
 import com.finca.app.application.dto.hourhand.HourHandDTORequest;
 import com.finca.app.application.dto.hourhand.HourHandDTOResponse;
 import com.finca.app.domain.models.HourHand;
+import java.util.List;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 
-public class HourHandDTOMapper {
-        public static HourHandDTORequest toDTO(HourHandDTOResponse hourHand) {
-            return new HourHandDTORequest(hourHand.getHourHandID(), hourHand.getDate(), hourHand.getStartTime(), hourHand.getEndTime());
-        }
+@Mapper(componentModel = "spring")
+public interface HourHandDTOMapper {
 
-        public static HourHand toEntity(HourHandDTOResponse dto) {
-            return new HourHand(dto.getHourHandID(), dto.getDate(), dto.getStartTime(), dto.getEndTime());
-        }
+    HourHand toModel(HourHandDTORequest dto);
+
+    HourHandDTOResponse toDTO(HourHand model);
+
+    List<HourHandDTOResponse> toDTOList(List<HourHand> models);
 }
