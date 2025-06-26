@@ -9,9 +9,9 @@ import java.util.Date;
 @Data
 public class Reservation {
     private Long reservationID;
-    private HourHand fincaHourHandID;
+    private Horario fincaHorarioID;
     private Usuario userID;
-    private TypeOfSeason typeOfSeasonID;
+    private TypeOfSeason typeOfSeason;
     private Boolean on;
     private Date expiration;
 }

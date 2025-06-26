@@ -1,6 +1,6 @@
 package com.finca.app.application.dto.reservation;
 
-import com.finca.app.domain.models.HourHand;
+import com.finca.app.domain.models.Horario;
 import com.finca.app.domain.models.TypeOfSeason;
 import com.finca.app.domain.models.Usuario;
 import lombok.AllArgsConstructor;
@@ -14,7 +14,7 @@ import java.util.Date;
 @Data
 public class ReservationDTOResponse {
     private Long reservationID;
-    private HourHand fincaHourHandID;
+    private Horario fincaHorarioID;
     private Usuario userID;
     private TypeOfSeason typeOfSeason;
     private Boolean on;
