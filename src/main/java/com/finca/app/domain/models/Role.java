@@ -1,4 +1,4 @@
 package com.finca.app.domain.models;
 
-public class Rol {
+public class Role {
 }

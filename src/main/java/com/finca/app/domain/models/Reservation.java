@@ -10,7 +10,7 @@ import java.util.Date;
 public class Reservation {
     private Long reservationID;
     private Horario fincaHorarioID;
-    private Usuario userID;
+    private User userID;
     private TypeOfSeason typeOfSeason;
     private Boolean on;
     private Date expiration;
