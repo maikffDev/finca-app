@@ -13,7 +13,7 @@ import lombok.Data;
 public class UserDtoRequest {
 
     @NotBlank(message = "Name cannot be empty")
-    private String nombre;
+    private String username;
 
     @NotBlank(message = "Email cannot be emmpty. Must have content")
     private String correo;

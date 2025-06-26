@@ -9,8 +9,6 @@ import java.util.Optional;
 
 public interface UserModelPort {
 
-    User create(User user);
-
     User save (User user);
 
     Boolean delete(Long id);
