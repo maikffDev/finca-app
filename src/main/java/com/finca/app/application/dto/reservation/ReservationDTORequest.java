@@ -1,6 +1,6 @@
 package com.finca.app.application.dto.reservation;
 
-import com.finca.app.domain.models.Horario;
+import com.finca.app.domain.models.HourHand;
 import com.finca.app.domain.models.TypeOfSeason;
 import com.finca.app.domain.models.User;
 import jakarta.validation.constraints.NotBlank;
@@ -14,7 +14,7 @@ public class ReservationDTORequest {
     private Long reservationID;
 
     @NotNull(message = "fincaHorario is required. An ID must be provided.")
-    private Horario fincaHorarioID;
+    private HourHand fincaHorarioID;
 
     @NotNull(message = "User is required. An ID must be provided.")
     private User userID;
