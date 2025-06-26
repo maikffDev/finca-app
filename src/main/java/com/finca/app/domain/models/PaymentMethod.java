@@ -1,6 +1,6 @@
 package com.finca.app.domain.models;
 
-public class Role {
+public class PaymentMethod {
     private Long id;
-    private String roleName;
+    private String tipo;
 }
