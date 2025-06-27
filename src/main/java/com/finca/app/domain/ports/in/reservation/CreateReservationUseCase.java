@@ -4,4 +4,5 @@ import com.finca.app.domain.models.Reservation;
 
 public interface CreateReservationUseCase {
     Reservation create(Reservation reservation);
+
 }

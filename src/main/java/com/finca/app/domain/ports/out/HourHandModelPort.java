@@ -11,4 +11,5 @@ public interface HourHandModelPort {
     Optional<HourHand> findById(Long id);
     HourHand update(HourHand hourHand);
     boolean deleteById(Long id);
+    HourHand logicalDeletion(HourHand hourHand);
 }
