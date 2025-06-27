@@ -27,6 +27,8 @@
 		<url/>
 	</scm>
 	<properties>
+		<maven.compiler.source>21</maven.compiler.source>
+		<maven.compiler.target>21</maven.compiler.target>
 		<java.version>21</java.version>
 	</properties>
 	<dependencies>
@@ -45,7 +47,6 @@
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
-			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -57,6 +58,13 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct</artifactId>
+			<version>1.5.5.Final</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -64,11 +72,20 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.10.1</version> <!-- recomendable fijar versión -->
 				<configuration>
+					<source>17</source>
+					<target>17</target>
 					<annotationProcessorPaths>
 						<path>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
+							<version>1.18.28</version> <!-- pon la versión que uses -->
+						</path>
+						<path>
+							<groupId>org.mapstruct</groupId>
+							<artifactId>mapstruct-processor</artifactId>
+							<version>1.5.5.Final</version> <!-- debe coincidir con mapstruct -->
 						</path>
 					</annotationProcessorPaths>
 				</configuration>
@@ -87,5 +104,6 @@
 			</plugin>
 		</plugins>
 	</build>
+
 
 </project>
