@@ -13,7 +13,8 @@ public interface UserDomainMapper {
 
     @Mappings({
             @Mapping(source = "id", target = "userId"),
-            @Mapping(source = "username", target = "correo"),
+            @Mapping(source = "username", target = "name"),
+            @Mapping(source = "email", target = "correo"),
             @Mapping(source = "password", target = "contrasena"),
             @Mapping(source = "enabled", target = "activo")
     })
