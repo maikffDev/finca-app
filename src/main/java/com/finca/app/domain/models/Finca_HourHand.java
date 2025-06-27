@@ -4,11 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class TypeOfSeason {
-    private long id;
-    private Season season;
-    private Discount discount;
+@Data
+public class Finca_HourHand {
+    private Long id;
+    private HourHand hourHand;
+    private Finca finca;
 }

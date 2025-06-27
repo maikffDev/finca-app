@@ -7,8 +7,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class TypeOfSeason {
-    private long id;
-    private Season season;
-    private Discount discount;
+public class Image {
+
+    private Long id;
+    private Finca finca;
+    private String urlImage;
 }

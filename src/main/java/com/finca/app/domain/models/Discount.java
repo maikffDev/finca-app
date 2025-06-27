@@ -4,17 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
-public class Finca {
+public class Discount {
 
     private Long id;
     private String nombre;
-    private String ubicacion;
-    private double pricePerHour;
-    private User user;
-    private String descripccion;
-    private boolean active;
-
+    private Double discountPercentage;
 }
