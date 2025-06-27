@@ -37,4 +37,8 @@ public class UserEntity {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<CommentaryEntity> comments = new ArrayList<>();
 
+    @OneToMany
+    @JoinColumn(name = "reservation_id")
+    private List<ReservationEntity> reservationEntities = new ArrayList<>();
+
 }

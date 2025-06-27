@@ -1,7 +1,12 @@
 package com.finca.app.insfraestructure.entities;
 
 import jakarta.persistence.*;
+import lombok.*;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 @Entity
 public class RoleEntity {
 
@@ -10,5 +15,5 @@ public class RoleEntity {
     private Long id;
 
     @Column(unique = true,nullable=false)
-    private String role;
+    private String roleName;
 }

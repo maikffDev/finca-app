@@ -8,16 +8,21 @@ import lombok.*;
 @Getter
 @Setter
 @Entity
-public class ImageEntity {
+@Table(name = "FincaHourHand")
+public class FincaHourHandEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
     @ManyToOne
-    @JoinColumn(name = "finca_id", nullable = false)
+    @JoinColumn(name = "fincaID", nullable = false)
     private FincaEntity finca;
 
-    private String urlImage;
+    @ManyToOne
+    @JoinColumn(name = "horarioID", nullable = false)
+    private HourHandEntity hourHandEntity;
+
+    private boolean reserved;
+
 }

@@ -1,7 +1,12 @@
 package com.finca.app.insfraestructure.entities;
 
 import jakarta.persistence.*;
+import lombok.*;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 @Entity
 public class DiscountEntity {
 
