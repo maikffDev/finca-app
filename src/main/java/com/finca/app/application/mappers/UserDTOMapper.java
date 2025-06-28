@@ -14,7 +14,7 @@ import java.util.List;
 public abstract class UserDTOMapper {
 
     @Mappings({
-            @Mapping(source = "nombre", target = "nombre"),
+            @Mapping(source = "username", target = "username"),
             @Mapping(source = "correo", target = "correo"),
             @Mapping(source = "Activo", target = "activo"),
             @Mapping(source = "rollId", target = "rollId")
@@ -23,7 +23,7 @@ public abstract class UserDTOMapper {
 
     @Mappings({
             @Mapping(source = "userId", target = "userId"),
-            @Mapping(source = "nombre", target = "nombre"),
+            @Mapping(source = "username", target = "username"),
             @Mapping(source = "correo", target = "correo"),
             @Mapping(source = "activo", target = "activo"),
             @Mapping(source = "rollId", target = "rollId")

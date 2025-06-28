@@ -12,7 +12,6 @@ public class UpdateUserUseCaseImpl implements UpdateUserUseCase {
         this.userModelPort = userModelPort;
     }
 
-
     @Override
     public User update(User user) {
         return userModelPort.update(user);

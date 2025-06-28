@@ -9,10 +9,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class User {
     private Long userId;
-    private String nombre;
+    private String username;
     private String correo;
     private String contrasena;
     private int intFallidosIngreso;
-    private boolean activo;
-    private boolean rollId;
+    private Boolean activo;
+    private Boolean rollId;
 }
