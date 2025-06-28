@@ -1,9 +1,9 @@
-package com.finca.app.application.services.user.impl;
+package com.finca.app.application.service.user.impl;
 
 import com.finca.app.application.dto.user.UserDtoRequest;
 import com.finca.app.application.dto.user.UserDtoResponse;
 import com.finca.app.application.mappers.UserDTOMapper;
-import com.finca.app.application.services.user.UserService;
+import com.finca.app.application.service.user.UserService;
 import com.finca.app.domain.models.User;
 
 import org.springframework.transaction.annotation.Transactional;

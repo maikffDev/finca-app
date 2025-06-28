@@ -1,4 +1,4 @@
-package com.finca.app.application.services.user.impl;
+package com.finca.app.application.service.user.impl;
 
 
 import com.finca.app.domain.models.User;
@@ -6,11 +6,8 @@ import com.finca.app.domain.ports.in.usuario.CreateUserUseCase;
 import com.finca.app.domain.ports.in.usuario.DeleteUserUseCase;
 import com.finca.app.domain.ports.in.usuario.FindUserUseCase;
 import com.finca.app.domain.ports.in.usuario.UpdateUserUseCase;
-import com.finca.app.infrastructure.adapters.UserModelAdapter;
-import org.hibernate.annotations.processing.Find;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.objenesis.instantiator.basic.DelegatingToExoticInstantiator;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

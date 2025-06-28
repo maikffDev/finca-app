@@ -1,13 +1,9 @@
-package com.finca.app.application.services.user;
+package com.finca.app.application.service.user;
 
 import com.finca.app.application.dto.user.UserDtoRequest;
 import com.finca.app.application.dto.user.UserDtoResponse;
-import com.finca.app.domain.models.User;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface UserService {
 
