@@ -1,4 +1,4 @@
-package com.finca.app.insfraestructure.entities;
+package com.finca.app.infrastructure.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

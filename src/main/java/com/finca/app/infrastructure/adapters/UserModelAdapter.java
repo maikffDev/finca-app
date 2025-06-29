@@ -2,7 +2,7 @@ package com.finca.app.infrastructure.adapters;
 
 import com.finca.app.domain.models.User;
 import com.finca.app.domain.ports.out.UserModelPort;
-import com.finca.app.infrastructure.entities.UserEntity;
+import com.finca.app.infrastructure.mappers.UserEntity;
 import com.finca.app.infrastructure.mappers.UserDomainMapper;
 import com.finca.app.infrastructure.repositories.JpaUserRepository;
 import org.springframework.data.domain.Page;
@@ -10,8 +10,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.lang.model.type.ErrorType;
-import java.lang.reflect.GenericSignatureFormatError;
 import java.util.List;
 import java.util.Optional;
 

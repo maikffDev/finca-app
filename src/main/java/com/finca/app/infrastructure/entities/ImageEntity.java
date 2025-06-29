@@ -1,4 +1,4 @@
-package com.finca.app.insfraestructure.entities;
+package com.finca.app.infrastructure.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -8,18 +8,16 @@ import lombok.*;
 @Getter
 @Setter
 @Entity
-public class CommentaryEntity {
+public class ImageEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
-    private UserEntity user;
 
     @ManyToOne
     @JoinColumn(name = "finca_id", nullable = false)
     private FincaEntity finca;
 
+    private String urlImage;
 }

@@ -1,7 +1,6 @@
 package com.finca.app.infrastructure.mappers;
 
 import com.finca.app.domain.models.User;
-import com.finca.app.infrastructure.entities.UserEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
