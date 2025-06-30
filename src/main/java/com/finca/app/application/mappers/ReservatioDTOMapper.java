@@ -1,11 +1,20 @@
 package com.finca.app.application.mappers;
 
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+import org.springframework.beans.factory.annotation.Autowired;
+
 
 @Mapper(componentModel = "spring")
 public class ReservatioDTOMapper {
-    /*
-    @Autowired
+
+    /* todo hacer imports correctos y corregir abstract del metodo.
+    *  la idea del mapper es que el metodo sea publico para que se pueda usar en cualquier contexto
+   */
+
+
+
+   /* @Autowired
     UsuarioModelService userModelService;
     @Autowired
     HorarioModelService horarioModelService;

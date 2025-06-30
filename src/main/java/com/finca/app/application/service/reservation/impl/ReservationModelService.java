@@ -57,7 +57,7 @@ public class ReservationModelService implements CreateReservationUseCase, Delete
 
 
     @Override
-    public Optional<Reservation> getById(Long id) {
-        return reservationModelPort.findByUserId(id);
+    public Reservation update(Reservation reservation) {
+        return null;
     }
 }

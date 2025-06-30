@@ -16,7 +16,7 @@ public abstract class UserDTOMapper {
     @Mappings({
             @Mapping(source = "username", target = "username"),
             @Mapping(source = "correo", target = "correo"),
-            @Mapping(source = "Activo", target = "activo"),
+            @Mapping(source = "activo", target = "activo"),
             @Mapping(source = "rollId", target = "rollId")
     })
             public abstract User toModel(UserDtoRequest dto);

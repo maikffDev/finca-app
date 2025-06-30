@@ -25,8 +25,9 @@ public class ReservationEntity {
     @JoinColumn(name = "user_id")
     private UserEntity userEntity;
 
-    @OneToOne
-    private TypeOfSeasonEntity typeOfSeasonEntity;
+    @ManyToOne // en relaciones @OneToMany, el lado inverso debe ser @ManyToOne
+    @JoinColumn(name = "type_of_season_id", nullable = false)
+    private TypeOfSeasonEntity typeOfSeason;
 
     @OneToOne
     private TicketEntity ticketEntity;

@@ -1,16 +1,21 @@
 package com.finca.app.infrastructure.entities;
 
 import jakarta.persistence.*;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
+@Data
+@Builder
 @Entity
-@Table(name = "users")
+@Table (name = "usuario")
 public class UserEntity {
 
     @Id

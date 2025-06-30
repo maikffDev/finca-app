@@ -15,6 +15,4 @@ public class HourHandDTORequest {
     private LocalTime startTime;
     private LocalTime endTime;
 
-    public HourHandDTORequest(Long hourHandID, LocalDate date, LocalTime startTime, LocalTime endTime) {
-    }
 }
