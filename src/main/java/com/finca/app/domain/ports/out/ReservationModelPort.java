@@ -20,4 +20,5 @@ public interface ReservationModelPort {
 
     Optional<Reservation> findByUserId(Long id);
 
-    Reservation update(Reservation reservation);}
+    Reservation update(Reservation reservation);
+}
