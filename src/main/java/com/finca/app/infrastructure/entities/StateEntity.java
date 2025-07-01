@@ -24,6 +24,6 @@ public class StateEntity {
     private List<TicketEntity> tickets = new ArrayList<>();
 
     @OneToMany
-    @JoinColumn(name = "stateHistory_id")
+    @JoinColumn(name = "stateHistoryId")
     private List<StateHistoryEntity> stateHistoryEntity;
 }

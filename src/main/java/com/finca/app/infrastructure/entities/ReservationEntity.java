@@ -35,7 +35,6 @@ public class ReservationEntity {
 
     private BigDecimal totalCost;
 
-    @OneToMany
-    @JoinColumn(name = "stateHistory_id" , nullable=false)
-    private StateHistoryEntity stateHistoryEntity;
+    @OneToMany(mappedBy = "reservationEntity", cascade = CascadeType.ALL)
+    private List<StateHistoryEntity> stateHistoryEntity;
 }
