@@ -7,4 +7,13 @@ import com.finca.app.domain.ports.out.HourHandModelPort;
 public class DeleteHourHandUseCaseImpl implements DeleteHouraHandUseCase {
     private HourHandModelPort hourHandModelPort;
 
+    @Override
+    public Boolean delete(Long id) {
+        return null;
+    }
+
+    @Override
+    public HourHand logicalDeletion(HourHand hourHand) {
+        return null;
+    }
 }

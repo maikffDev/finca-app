@@ -3,6 +3,7 @@ import com.finca.app.domain.models.Reservation;
 import com.finca.app.domain.ports.in.reservation.CreateReservationUseCase;
 import com.finca.app.domain.ports.in.reservation.DeleteReservationUseCase;
 import com.finca.app.domain.ports.in.reservation.FindReservationUseCase;
+
 import com.finca.app.domain.ports.in.reservation.UpdateReservationUseCase;
 import org.springframework.stereotype.Service;
 
@@ -16,19 +17,19 @@ public class ReservationModelService implements CreateReservationUseCase, Delete
 
     private final CreateReservationUseCase createReservationUseCase;
     private final DeleteReservationUseCase deleteReservationUseCase;
-    private final UpdateReservationUseCase upDateReservationUseCase;
+    private final UpdateReservationUseCase updateReservationUseCase;
     private final FindReservationUseCase findReservationUseCase;
 
     public ReservationModelService(CreateReservationUseCase createReservationUseCase, DeleteReservationUseCase deleteReservationUseCase, UpdateReservationUseCase upDateReservationUseCase, FindReservationUseCase findReservationUseCase) {
         this.createReservationUseCase = createReservationUseCase;
         this.deleteReservationUseCase = deleteReservationUseCase;
-        this.upDateReservationUseCase = upDateReservationUseCase;
+        this.updateReservationUseCase = upDateReservationUseCase;
         this.findReservationUseCase = findReservationUseCase;
     }
 
     @Override
     public Reservation update(Reservation reservation) {
-        return upDateReservationUseCase.update(reservation);
+        return updateReservationUseCase.update(reservation);
     }
 
     @Override
