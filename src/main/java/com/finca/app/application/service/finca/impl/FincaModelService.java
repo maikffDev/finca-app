@@ -1,4 +1,4 @@
-package com.finca.app.application.services.finca.impl;
+package com.finca.app.application.service.finca.impl;
 
 import com.finca.app.application.usecases.finca.CreateFincaUseCaseImpl;
 import com.finca.app.domain.models.Finca;
@@ -13,6 +13,9 @@ import java.util.Optional;
 
 @Service
 public class FincaModelService implements CreateFincaUseCase, DeleteFincaUseCase, UpdateFincaUseCase, FindFincaUseCase {
+
+    //TODO, OJO ACA , definan implementaciones por defecto porque sino FincaModelService se autoInyecta por ser el unico BEAN que implemente las 4 interfaces iniciales, generando depedencia CIRCULAR. impiendo que compile
+    // TODAS las implementaciones tienen que llevar la anotacion "Service" sino no se reconoce como un BEAN y no es tomado como opcion para ser INYECTADO
 
     private final CreateFincaUseCase createFincaUseCase;
     private final DeleteFincaUseCase deleteFincaUseCase;

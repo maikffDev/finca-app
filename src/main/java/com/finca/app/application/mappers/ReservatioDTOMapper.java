@@ -11,10 +11,10 @@ public class ReservatioDTOMapper {
     /* todo hacer imports correctos y corregir abstract del metodo.
     *  la idea del mapper es que el metodo sea publico para que se pueda usar en cualquier contexto
    */
+    //TODO
 
-
-
-   /* @Autowired
+    /*
+    @Autowired
     UsuarioModelService userModelService;
     @Autowired
     HorarioModelService horarioModelService;

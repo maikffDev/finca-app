@@ -22,7 +22,7 @@ public interface UserDomainMapper {
 
     @Mappings({
             @Mapping(source = "userId", target = "userId"),
-            @Mapping(source = "username", target = "nombre"),
+            @Mapping(source = "username", target = "username"),
             @Mapping(source = "correo", target = "correo"),
             @Mapping(source = "contrasena", target = "contrasena"),
             @Mapping(source = "activo", target = "activo")
@@ -31,7 +31,7 @@ public interface UserDomainMapper {
 
     @Mappings({
             @Mapping(source = "userId", target = "userId"),
-            @Mapping(source = "nombre", target = "username"),
+            @Mapping(source = "username", target = "username"),
             @Mapping(source = "correo", target = "correo"),
             @Mapping(source = "contrasena", target = "contrasena"),
             @Mapping(source = "activo", target = "activo")

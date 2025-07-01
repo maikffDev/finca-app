@@ -1,12 +1,14 @@
-package com.finca.app.insfraestructure.adapters;
+package com.finca.app.infrastructure.adapters;
+
 
 
 import com.finca.app.domain.models.HourHand;
 import com.finca.app.domain.ports.out.HourHandModelPort;
-import com.finca.app.insfraestructure.entities.HourHandEntity;
-import com.finca.app.insfraestructure.exceptions.GenericErrorException;
-import com.finca.app.insfraestructure.mappers.HourHandDomainMapper;
-import com.finca.app.insfraestructure.repository.JpaHourHandRepository;
+
+import com.finca.app.infrastructure.entities.HourHandEntity;
+import com.finca.app.infrastructure.exceptions.GenericErrorException;
+import com.finca.app.infrastructure.mappers.HourHandDomainMapper;
+import com.finca.app.infrastructure.repositories.JpaHourHandRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

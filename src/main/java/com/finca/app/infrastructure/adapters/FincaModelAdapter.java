@@ -1,5 +1,6 @@
 package com.finca.app.infrastructure.adapters;
 
+
 import com.finca.app.domain.models.Finca;
 import com.finca.app.domain.ports.out.FincaModelPort;
 import com.finca.app.infrastructure.entities.FincaEntity;
@@ -29,7 +30,7 @@ public class FincaModelAdapter implements FincaModelPort {
             if (jpaFincaRepository.existsByName(finca.getName())){
                 throw new GenericErrorException("Name is already in use");
             }
-            if (jpaFincaRepository.existByUbication(finca.getUbication())){
+            if (jpaFincaRepository.existsByUbication(finca.getUbication())){
                 throw new GenericErrorException("Ubication is already in use");
             }
             FincaEntity fincaEntity = fincaDomainMapper.fromDomainModel(finca);
@@ -55,7 +56,7 @@ public class FincaModelAdapter implements FincaModelPort {
 
     @Override
     public Optional<Finca> findByUsername(String username){
-        return jpaFincaRepository.findByUsername(username).map(fincaDomainMapper::toDomainModel);
+        return jpaFincaRepository.findByUser_Username(username).map(fincaDomainMapper::toDomainModel);
     }
 
     @Override

@@ -1,7 +1,8 @@
-package com.finca.app.insfraestructure.mappers;
+package com.finca.app.infrastructure.mappers;
 
 import com.finca.app.domain.models.HourHand;
-import com.finca.app.insfraestructure.entities.HourHandEntity;
+
+import com.finca.app.infrastructure.entities.HourHandEntity;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")

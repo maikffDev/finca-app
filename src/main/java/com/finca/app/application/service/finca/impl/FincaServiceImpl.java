@@ -1,11 +1,10 @@
-package com.finca.app.application.services.finca.impl;
+package com.finca.app.application.service.finca.impl;
 
 import com.finca.app.application.dto.finca.FincaDTORequest;
 import com.finca.app.application.dto.finca.FincaDTOResponse;
 import com.finca.app.application.mappers.FincaDTOMapper;
-import com.finca.app.application.services.finca.FincaService;
+import com.finca.app.application.service.finca.FincaService;
 import com.finca.app.domain.models.Finca;
-import com.finca.app.domain.models.Schedule;
 import com.finca.app.infrastructure.exceptions.GenericErrorException;
 import com.finca.app.infrastructure.exceptions.GenericNoContentException;
 

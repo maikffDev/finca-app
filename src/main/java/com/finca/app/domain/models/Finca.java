@@ -2,6 +2,7 @@ package com.finca.app.domain.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
@@ -14,12 +15,12 @@ public class Finca {
     private String name;
     private String ubication;
     private double pricePerHour;
-    private List<Schedule> availableSchedules;
+    private List<HourHand> availableSchedules;
     private String description;
     private boolean active;
     private User user;
 
-    public Long getId() {
+    /*public Long getId() {
         return id;
     }
 
@@ -73,5 +74,5 @@ public class Finca {
 
     public void setActive(boolean active) {
         this.active = active;
-    }
+    }*/
 }

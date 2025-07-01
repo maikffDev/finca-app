@@ -1,4 +1,4 @@
-package com.finca.app.application.services.finca;
+package com.finca.app.application.service.finca;
 
 import com.finca.app.application.dto.finca.FincaDTORequest;
 import com.finca.app.application.dto.finca.FincaDTOResponse;

@@ -40,7 +40,7 @@ public class FincaEntity {
     private boolean active;
 
     @OneToMany(mappedBy = "finca")
-    private List<Schedule> availableSchedules;
+    private List<FincaHourHandEntity> availableSchedules;
 
     @ManyToMany
     @JoinTable(
