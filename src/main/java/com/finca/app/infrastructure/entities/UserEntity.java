@@ -2,18 +2,15 @@ package com.finca.app.infrastructure.entities;
 
 import jakarta.persistence.*;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
-@Builder
+@Getter
+@Setter
 @Entity
 @Table (name = "usuario")
 public class UserEntity {
@@ -50,7 +47,10 @@ public class UserEntity {
     @JoinColumn(name = "reservation_id")
     private List<ReservationEntity> reservationEntities = new ArrayList<>();
 
-    @OneToMany
-    private List<PaymentDetailsEntity> paymentDetails;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<PaymentDetailsEntity> paymentDetails = new ArrayList<>();
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<UserDiscountEntity> userDiscounts = new ArrayList<>();
 
 }
