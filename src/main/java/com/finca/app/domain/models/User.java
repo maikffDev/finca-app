@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,5 +16,6 @@ public class User {
     private String contrasena;
     private int intFallidosIngreso;
     private Boolean activo;
-    private Boolean rollId;
+    private List<Role>roles;
+    private List<PaymentDetails> paymentDetailsList;
 }
