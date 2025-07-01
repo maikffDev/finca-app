@@ -1,7 +1,7 @@
 package com.finca.app.application.usecases.reservation;
 
 import com.finca.app.domain.models.Reservation;
-import com.finca.app.domain.ports.in.Reservation.DeleteReservationUseCase;
+import com.finca.app.domain.ports.in.reservation.DeleteReservationUseCase;
 import com.finca.app.domain.ports.out.ReservationModelPort;
 import org.springframework.stereotype.Service;
 
