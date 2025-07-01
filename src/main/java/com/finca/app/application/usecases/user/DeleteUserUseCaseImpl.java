@@ -1,7 +1,7 @@
 package com.finca.app.application.usecases.user;
 
 import com.finca.app.domain.models.User;
-import com.finca.app.domain.ports.in.usuario.DeleteUserUseCase;
+import com.finca.app.domain.ports.in.user.DeleteUserUseCase;
 import com.finca.app.domain.ports.out.UserModelPort;
 import org.springframework.stereotype.Service;
 

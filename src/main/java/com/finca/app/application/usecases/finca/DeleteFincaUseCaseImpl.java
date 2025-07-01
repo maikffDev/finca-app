@@ -1,7 +1,7 @@
 package com.finca.app.application.usecases.finca;
 
 import com.finca.app.domain.models.Finca;
-import com.finca.app.domain.ports.in.DeleteFincaUseCase;
+import com.finca.app.domain.ports.in.finca.DeleteFincaUseCase;
 import com.finca.app.domain.ports.out.FincaModelPort;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;

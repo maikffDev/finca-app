@@ -1,11 +1,10 @@
 package com.finca.app.application.service.finca.impl;
 
-import com.finca.app.application.usecases.finca.CreateFincaUseCaseImpl;
 import com.finca.app.domain.models.Finca;
-import com.finca.app.domain.ports.in.CreateFincaUseCase;
-import com.finca.app.domain.ports.in.DeleteFincaUseCase;
-import com.finca.app.domain.ports.in.FindFincaUseCase;
-import com.finca.app.domain.ports.in.UpdateFincaUseCase;
+import com.finca.app.domain.ports.in.finca.CreateFincaUseCase;
+import com.finca.app.domain.ports.in.finca.DeleteFincaUseCase;
+import com.finca.app.domain.ports.in.finca.FindFincaUseCase;
+import com.finca.app.domain.ports.in.finca.UpdateFincaUseCase;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

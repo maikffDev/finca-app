@@ -1,7 +1,7 @@
 package com.finca.app.application.usecases.user;
 
 import com.finca.app.domain.models.User;
-import com.finca.app.domain.ports.in.usuario.FindUserUseCase;
+import com.finca.app.domain.ports.in.user.FindUserUseCase;
 import com.finca.app.domain.ports.out.UserModelPort;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

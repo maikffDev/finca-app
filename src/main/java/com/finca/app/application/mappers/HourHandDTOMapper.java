@@ -8,11 +8,11 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring")
-public interface HourHandDTOMapper {
+public abstract class HourHandDTOMapper {
 
-    HourHand toModel(HourHandDTORequest dto);
+    public abstract HourHand toModel(HourHandDTORequest dto);
 
-    HourHandDTOResponse toDTO(HourHand model);
+    public abstract HourHandDTOResponse toDTO(HourHand model);
 
-    List<HourHandDTOResponse> toDTOList(List<HourHand> models);
+    public abstract List<HourHandDTOResponse> toDTOList(List<HourHand> models);
 }

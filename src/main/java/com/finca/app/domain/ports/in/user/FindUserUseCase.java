@@ -1,4 +1,4 @@
-package com.finca.app.domain.ports.in.usuario;
+package com.finca.app.domain.ports.in.user;
 
 import com.finca.app.domain.models.User;
 import org.springframework.data.domain.Page;
