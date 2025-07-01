@@ -10,5 +10,5 @@ import lombok.NoArgsConstructor;
 public class TypeOfSeason {
     private long id;
     private Season season;
-    private Discount discount;
+    //private Discount discount;
 }
