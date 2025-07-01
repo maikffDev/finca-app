@@ -1,9 +1,7 @@
 package com.finca.app.application.dto.reservation;
 
 
-import com.finca.app.domain.models.HourHand;
-import com.finca.app.domain.models.TypeOfSeason;
-import com.finca.app.domain.models.User;
+import com.finca.app.domain.models.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,4 +19,6 @@ public class ReservationDTOResponse {
     private Boolean on;
     private Date expiration;
     private BigDecimal totalCost;
+    private Ticket ticket;
+    private State finalState;
 }

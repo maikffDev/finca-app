@@ -25,5 +25,5 @@ public class StateEntity {
 
     @OneToMany
     @JoinColumn(name = "stateHistory_id")
-    private StateHistoryEntity stateHistoryEntity;
+    private List<StateHistoryEntity> stateHistoryEntity;
 }
