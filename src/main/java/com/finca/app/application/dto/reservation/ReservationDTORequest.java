@@ -6,6 +6,7 @@ import com.finca.app.domain.models.User;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 public class ReservationDTORequest {
@@ -19,11 +20,11 @@ public class ReservationDTORequest {
     @NotNull(message = "User is required. An ID must be provided.")
     private User userID;
 
-    @NotNull(message = "TypeOfSeason is required. An ID must be provided.")
-    private TypeOfSeason typeOfSeason;
-
     private Boolean on = true;
 
     @NotBlank(message = "Expiration is required. An ID must be provided.")
     private Date expiration;
+
+    @NotNull(message = "An import is required")
+    private BigDecimal totalCost;
 }

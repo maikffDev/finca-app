@@ -3,6 +3,7 @@ package com.finca.app.infrastructure.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -25,10 +26,6 @@ public class ReservationEntity {
     @JoinColumn(name = "user_id")
     private UserEntity userEntity;
 
-    @ManyToOne // en relaciones @OneToMany, el lado inverso debe ser @ManyToOne
-    @JoinColumn(name = "type_of_season_id", nullable = false)
-    private TypeOfSeasonEntity typeOfSeason;
-
     @OneToOne
     private TicketEntity ticketEntity;
 
@@ -36,4 +33,9 @@ public class ReservationEntity {
 
     private LocalDate expirationDate;
 
+    private BigDecimal totalCost;
+
+    @OneToMany
+    @JoinColumn(name = "stateHistory_id" , nullable=false)
+    private StateHistoryEntity stateHistoryEntity;
 }
