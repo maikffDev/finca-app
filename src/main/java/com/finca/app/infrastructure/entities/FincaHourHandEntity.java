@@ -25,4 +25,5 @@ public class FincaHourHandEntity {
 
     private boolean reserved;
 
+    private double pricePerHour;
 }
