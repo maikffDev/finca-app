@@ -1,7 +1,10 @@
 package com.finca.app.infrastructure.entities;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.List;
 
@@ -10,19 +13,17 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-public class RoleEntity {
+@Table(name = "Permission")
+public class PermissionEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true,nullable=false)
-    private String roleName;
+    private String permissionName;
 
     @ManyToMany
-    private List<PermissionEntity> permissions;
+    private List<RoleEntity> roles;
 
-    @ManyToMany
-    private List<UserEntity>users;
 
 }

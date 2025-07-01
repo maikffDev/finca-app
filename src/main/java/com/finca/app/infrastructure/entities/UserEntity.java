@@ -36,9 +36,12 @@ public class UserEntity {
 
     private boolean activo;
 
-    @ManyToOne
+    /*@ManyToOne
     @JoinColumn(name = "rol_id")
-    private RoleEntity rolId;
+    private RoleEntity rolId;*/
+
+    @ManyToMany
+    private List<RoleEntity>rolesId;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<CommentaryEntity> comments = new ArrayList<>();
@@ -46,5 +49,8 @@ public class UserEntity {
     @OneToMany
     @JoinColumn(name = "reservation_id")
     private List<ReservationEntity> reservationEntities = new ArrayList<>();
+
+    @OneToMany
+    private List<PaymentDetailsEntity> paymentDetails;
 
 }
