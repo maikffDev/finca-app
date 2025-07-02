@@ -53,8 +53,8 @@ public class ReservationModelService implements CreateReservationUseCase, Delete
     }
 
     @Override
-    public Optional<Reservation> getByReservationID(Long reservationID) {
-        return findReservationUseCase.getByReservationID(reservationID);
+    public Optional<Reservation> getById(Long reservationID) {
+        return findReservationUseCase.getById(reservationID);
     }
 
     @Override

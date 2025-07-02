@@ -10,24 +10,26 @@ import org.mapstruct.Named;
 import java.util.List;
 
 
-@Mapper
+@Mapper(componentModel = "spring")
 public abstract class UserDTOMapper {
 
-    @Mappings({
+/*    @Mappings({
             @Mapping(source = "username", target = "username"),
             @Mapping(source = "correo", target = "correo"),
             @Mapping(source = "activo", target = "activo"),
             @Mapping(source = "rollId", target = "rollId")
     })
-            public abstract User toModel(UserDtoRequest dto);
+            */
 
-    @Mappings({
+        public abstract User toModel(UserDtoRequest dto);
+
+/*    @Mappings({
             @Mapping(source = "userId", target = "userId"),
             @Mapping(source = "username", target = "username"),
             @Mapping(source = "correo", target = "correo"),
             @Mapping(source = "activo", target = "activo"),
             @Mapping(source = "rollId", target = "rollId")
-    })
+    })*/
     public abstract  UserDtoResponse toDto(User user);
 
     public abstract List<UserDtoResponse> toDtoList(List<User> users);

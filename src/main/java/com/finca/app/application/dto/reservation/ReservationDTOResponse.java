@@ -1,13 +1,12 @@
 package com.finca.app.application.dto.reservation;
 
 
-import com.finca.app.domain.models.HourHand;
-import com.finca.app.domain.models.TypeOfSeason;
-import com.finca.app.domain.models.User;
+import com.finca.app.domain.models.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 @AllArgsConstructor
@@ -17,7 +16,9 @@ public class ReservationDTOResponse {
     private Long reservationID;
     private HourHand fincaHorarioID;
     private User userID;
-    private TypeOfSeason typeOfSeason;
     private Boolean on;
     private Date expiration;
+    private BigDecimal totalCost;
+    private Ticket ticket;
+    private State finalState;
 }

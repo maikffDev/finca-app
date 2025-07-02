@@ -22,4 +22,8 @@ public class StateEntity {
     @OneToMany
     @JoinColumn(name = "ticket_id", nullable = false)
     private List<TicketEntity> tickets = new ArrayList<>();
+
+    @OneToMany
+    @JoinColumn(name = "stateHistoryId")
+    private List<StateHistoryEntity> stateHistoryEntity;
 }

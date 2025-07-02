@@ -8,7 +8,7 @@ import java.util.Optional;
 public interface FindReservationUseCase {
     List<Reservation> getAll();
 
-    Optional<Reservation> getByReservationID(Long reservationID);
+    Optional<Reservation> getById(Long reservationID);
 
     Optional<Reservation> getByUserID(Long userID);
 

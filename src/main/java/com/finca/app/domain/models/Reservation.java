@@ -3,6 +3,8 @@ package com.finca.app.domain.models;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
 import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
@@ -11,8 +13,9 @@ public class Reservation {
     private Long reservationID;
     private HourHand fincaHorarioID;
     private User userID;
-    private TypeOfSeason typeOfSeason;
     private Boolean on;
     private Date expiration;
     private Ticket ticket;
+    private State finalState;
+    private BigDecimal totalCost;
 }

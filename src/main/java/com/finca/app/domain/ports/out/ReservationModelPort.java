@@ -12,9 +12,7 @@ public interface ReservationModelPort {
 
     List<Reservation> findAll();
 
-
     Optional<Reservation> findByReservationID(Long userID);
-
 
     Reservation logicalDeletion(Reservation reservation);
 
