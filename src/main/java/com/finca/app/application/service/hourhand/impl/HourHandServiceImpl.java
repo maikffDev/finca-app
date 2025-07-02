@@ -6,7 +6,7 @@ import com.finca.app.application.mappers.HourHandDTOMapper;
 import com.finca.app.application.service.hourhand.HourHandService;
 import com.finca.app.application.service.util.GenericErrorException;
 
-import com.finca.app.application.util.GenericNoContentException;
+import com.finca.app.infrastructure.exceptions.GenericNoContentException2;
 import com.finca.app.domain.models.HourHand;
 
 import org.springframework.stereotype.Service;
@@ -34,14 +34,14 @@ public class HourHandServiceImpl implements HourHandService {
     public List<HourHandDTOResponse> findAll() {
         List<HourHand> list = hourHand.findAll();
         if (list.isEmpty()) {
-            throw new GenericNoContentException("No HourHands found in the system.");
+            throw new GenericNoContentException2("No HourHands found in the system.");
         }
         return hourHandDTOMapper.toDTOList(list);
     }
 
     public HourHandDTOResponse findById(Long id) {
         HourHand model = hourHand.findById(id)
-                .orElseThrow(() -> new GenericNoContentException("HourHand with id '" + id + "' not found."));
+                .orElseThrow(() -> new GenericNoContentException2("HourHand with id '" + id + "' not found."));
         return hourHandDTOMapper.toDTO(model);
     }
 

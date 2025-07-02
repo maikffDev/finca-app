@@ -1,4 +1,4 @@
-package com.finca.app.application.utils.response;
+package com.finca.app.infrastructure.exceptions;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
