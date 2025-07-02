@@ -4,16 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Set;
-
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Discount {
-
+@Data
+public class Discount_User {
     private Long id;
-    private String name;
-    private int discountPercentage;
-    private Set<UserDiscount> usersDicounts;
-
+    private Long discountID;
+    private Long userID;
+    private Long cantUse;
+    private Boolean status;
 }

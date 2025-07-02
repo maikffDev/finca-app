@@ -7,7 +7,7 @@ import com.finca.app.domain.ports.out.ReservationModelPort;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UpdateReservationUseCaseImpl implements UpdateReservationUseCase {
+public class UpdateReservationUseCaseImpl implements UpDateReservationUseCase {
     private final ReservationModelPort reservationModelPort;
 
     public UpdateReservationUseCaseImpl(ReservationModelPort reservationModelPort){ this.reservationModelPort = reservationModelPort;}

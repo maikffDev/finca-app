@@ -1,13 +1,5 @@
 package com.finca.app.application.service.reservation.impl;
 
-import com.finca.app.application.dto.reservation.ReservationDTORequest;
-import com.finca.app.application.dto.reservation.ReservationDTOResponse;
-import com.finca.app.application.mappers.ReservationDTOMapper;
-import com.finca.app.application.service.reservation.ReservationService;
-import com.finca.app.application.util.GenericNoContentException;
-import com.finca.app.domain.models.Finca;
-import com.finca.app.domain.models.Reservation;
-import com.finca.app.infrastructure.exceptions.GenericErrorException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
