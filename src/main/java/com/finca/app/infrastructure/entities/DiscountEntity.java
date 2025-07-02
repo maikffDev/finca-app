@@ -15,7 +15,7 @@ public class DiscountEntity {
     private Long id;
 
     @Column(unique = true,nullable=false)
-    private String nombre;
+    private String name;
 
     @Column(unique = true,nullable=false)
     private Double discountPercentage;
