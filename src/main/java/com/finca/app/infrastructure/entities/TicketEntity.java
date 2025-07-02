@@ -22,13 +22,7 @@ public class TicketEntity {
     @JoinColumn(name = "reservation_id", nullable = false)
     private ReservationEntity reservationEntity;
 
-    @ManyToOne
-    @JoinColumn(name = "payment_method_id", nullable = false)
-    private PaymentMethodEntity paymentMethodEntity;
-
-    @ManyToOne
-    @JoinColumn(name = "state_id", nullable = false)
-    private StateEntity stateEntity;
+    private String paymentMethodEntity;
 
     private LocalDate paymentDate;
 }

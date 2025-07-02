@@ -1,5 +1,6 @@
 package com.finca.app.application.dto.finca;
 
+import com.finca.app.domain.models.Finca;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,4 +14,6 @@ public class FincaDTOResponse {
     private String location;
     private String pricePerHour;
     private Boolean active;
+
+
 }

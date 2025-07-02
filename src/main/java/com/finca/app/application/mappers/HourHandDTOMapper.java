@@ -15,4 +15,6 @@ public abstract class HourHandDTOMapper {
     public abstract HourHandDTOResponse toDTO(HourHand model);
 
     public abstract List<HourHandDTOResponse> toDTOList(List<HourHand> models);
+
+
 }

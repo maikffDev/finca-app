@@ -1,18 +1,25 @@
 package com.finca.app.application.service.reservation.impl;
 
-import org.springframework.stereotype.Service;
+import com.finca.app.application.dto.reservation.ReservationDTORequest;
+import com.finca.app.application.dto.reservation.ReservationDTOResponse;
+import com.finca.app.application.mappers.ReservationDTOMapper;
+import com.finca.app.application.service.reservation.ReservationService;
+import com.finca.app.domain.models.Reservation;
+import com.finca.app.infrastructure.exceptions.GenericErrorException;
+import com.finca.app.infrastructure.exceptions.GenericNoContentException;
 
 import java.util.List;
 import java.util.Optional;
 
 
-public  class ReservationServeceImpl implements ReservationService {
+public  class ReservationServiceImpl implements ReservationService {
 
     private final ReservationModelService reservationModelService;
     private final ReservationDTOMapper reservationDTOMapper;
+    //private final ReservationDTOMapper reservationDTOMapper2 = new ReservationDTOMapper2;
 
 
-    public ReservationServeceImpl(ReservationModelService reservationModelService, ReservationDTOMapper reservationDTOMapper){
+    public ReservationServiceImpl(ReservationModelService reservationModelService, ReservationDTOMapper reservationDTOMapper){
         this.reservationDTOMapper = reservationDTOMapper;
         this.reservationModelService = reservationModelService;
 
@@ -20,11 +27,13 @@ public  class ReservationServeceImpl implements ReservationService {
 
     @Override
     public ReservationDTOResponse create(ReservationDTORequest reservationDTORequest) {
-        Reservation reservation = reservationDTOMapper.toModel(reservationDTORequest);
-        Reservation newReservation = reservationModelService.create(reservation);
+        //Reservation reservation = reservationDTOMapper.toModel(reservationDTORequest);
+        Reservation newReservation = reservationModelService.create(reservationDTORequest);
         return reservationDTOMapper.toDto(newReservation);
 
     }
+
+
 
     @Override
     public List<ReservationDTOResponse> getAll() {

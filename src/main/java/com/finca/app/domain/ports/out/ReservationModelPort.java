@@ -1,5 +1,6 @@
 package com.finca.app.domain.ports.out;
 
+import com.finca.app.application.dto.reservation.ReservationDTORequest;
 import com.finca.app.domain.models.Reservation;
 
 import java.util.List;
@@ -19,4 +20,6 @@ public interface ReservationModelPort {
     Optional<Reservation> findByUserId(Long id);
 
     Reservation update(Reservation reservation);
+
+    Reservation create(ReservationDTORequest reservation);
 }

@@ -2,6 +2,7 @@ package com.finca.app.infrastructure.controllers;
 
 
 import com.finca.app.application.dto.reservation.ReservationDTORequest;
+import com.finca.app.application.dto.reservation.ReservationDTORequest2;
 import com.finca.app.application.dto.reservation.ReservationDTOResponse;
 import com.finca.app.application.service.reservation.ReservationService;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -29,6 +30,12 @@ public class ReservationController {
         ReservationDTOResponse created = reservationService.create(request);
         return new ResponseEntity<>(created, HttpStatus.CREATED);
     }
+
+    /*@PostMapping
+    public ResponseEntity<ReservationDTOResponse2> create2(@Valid @RequestBody ReservationDTORequest2 request) {
+        ReservationDTOResponse2 created = reservationService.create2(request);
+        return new ResponseEntity<>(created, HttpStatus.CREATED);
+    }*/
 
     @GetMapping
     public ResponseEntity<List<ReservationDTOResponse>> getAll() {
