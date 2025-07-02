@@ -1,4 +1,4 @@
-package com.finca.app.application.usecases.Reservation;
+package com.finca.app.application.usecases.reservation;
 
 import com.finca.app.domain.models.Reservation;
 

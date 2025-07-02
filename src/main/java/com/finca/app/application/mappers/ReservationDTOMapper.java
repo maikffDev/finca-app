@@ -1,7 +1,7 @@
 package com.finca.app.application.mappers;
 
 import com.finca.app.application.dto.reservation.ReservationDTORequest;
-import com.finca.app.application.service.hourhand.HourHandService;
+import com.finca.app.application.service.schedule.ScheduleService;
 import com.finca.app.application.service.user.impl.UserModelService;
 import com.finca.app.domain.models.Reservation;
 import org.mapstruct.Mapper;
@@ -21,7 +21,7 @@ public abstract class ReservationDTOMapper {
     @Autowired
     UserModelService userModelService;
     @Autowired
-    HourHandService horarioModelService;
+    ScheduleService horarioModelService;
     @Autowired
     UserModelService usuarioModelService;
 

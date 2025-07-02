@@ -1,18 +1,18 @@
-package com.finca.app.application.dto.hourhand;
+package com.finca.app.application.dto.schedule;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class HourHandDTORequest {
-    private Long hourHand;
+public class ScheduleDTOResponse {
+    private Long scheduleID;
     private LocalDate date;
     private LocalTime startTime;
     private LocalTime endTime;
+
 
 }

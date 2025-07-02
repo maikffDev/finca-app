@@ -9,7 +9,7 @@ import java.util.Date;
 @Data
 public class Reservation {
     private Long reservationID;
-    private HourHand fincaHorarioID;
+    private Schedule fincaHorarioID;
     private User userID;
     private TypeOfSeason typeOfSeason;
     private Boolean on;

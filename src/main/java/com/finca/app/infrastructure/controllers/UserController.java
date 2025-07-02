@@ -1,4 +1,4 @@
-package com.finca.app.infrastructure.controller;
+package com.finca.app.infrastructure.controllers;
 
 import com.finca.app.application.dto.user.UserDtoRequest;
 import com.finca.app.application.dto.user.UserDtoResponse;

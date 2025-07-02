@@ -9,7 +9,7 @@ import org.mapstruct.Mappings;
 import java.util.List;
 
 @Mapper(componentModel = "spring")
-public interface UserDomainMapper {
+public abstract class UserDomainMapper {
 
     /*@Mappings({
             @Mapping(source = "id", target = "userId"),
@@ -27,7 +27,7 @@ public interface UserDomainMapper {
             @Mapping(source = "contrasena", target = "contrasena"),
             @Mapping(source = "activo", target = "activo")
     })
-    UserEntity fromDomainModel(User user);
+    public abstract UserEntity fromDomainModel(User user);
 
     @Mappings({
             @Mapping(source = "userId", target = "userId"),
@@ -36,9 +36,9 @@ public interface UserDomainMapper {
             @Mapping(source = "contrasena", target = "contrasena"),
             @Mapping(source = "activo", target = "activo")
     })
-    User toDomainModel(UserEntity userEntity);
+    public abstract User toDomainModel(UserEntity userEntity);
 
-    List<UserEntity> fromDomainModelList(List<User> users);
+    public abstract List<UserEntity> fromDomainModelList(List<User> users);
 
-    List<User> toDomainModelList(List<UserEntity> userEntities);
+    public abstract List<User> toDomainModelList(List<UserEntity> userEntities);
 }

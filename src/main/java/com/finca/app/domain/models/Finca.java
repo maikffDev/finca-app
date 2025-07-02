@@ -2,7 +2,6 @@ package com.finca.app.domain.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
@@ -15,7 +14,7 @@ public class Finca {
     private String name;
     private String ubication;
     private double pricePerHour;
-    private List<HourHand> availableSchedules;
+    private List<Schedule> availableSchedules;
     private String description;
     private boolean active;
     private User user;

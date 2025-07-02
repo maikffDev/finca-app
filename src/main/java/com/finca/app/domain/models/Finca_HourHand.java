@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @Data
 public class Finca_HourHand {
     private Long id;
-    private HourHand hourHand;
+    private Schedule schedule;
     private Finca finca;
 }

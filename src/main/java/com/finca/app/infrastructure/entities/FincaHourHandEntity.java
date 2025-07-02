@@ -21,7 +21,7 @@ public class FincaHourHandEntity {
 
     @ManyToOne
     @JoinColumn(name = "horarioID", nullable = false)
-    private HourHandEntity hourHandEntity;
+    private ScheduleEntity scheduleEntity;
 
     private boolean reserved;
 
