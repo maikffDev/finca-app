@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Commentary {
 
+   private Long commentaryId;
    private User user;
    private Finca finca;
    private Reservation reservation;
