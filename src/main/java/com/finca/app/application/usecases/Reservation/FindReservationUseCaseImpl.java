@@ -1,15 +1,18 @@
 package com.finca.app.application.usecases.Reservation;
 
 import com.finca.app.domain.models.Reservation;
-import com.finca.app.domain.ports.in.reservation.FindReservatioUseCase;
+
+import com.finca.app.domain.ports.in.reservation.FindReservationUseCase;
 import com.finca.app.domain.ports.out.ReservationModelPort;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
-public class FindReservationUseCaseImpl implements FindReservatioUseCase {
+@Primary
+public class FindReservationUseCaseImpl implements FindReservationUseCase {
 
     private final ReservationModelPort reservationModelPort;
 

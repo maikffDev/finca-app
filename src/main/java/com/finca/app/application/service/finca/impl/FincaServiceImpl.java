@@ -7,9 +7,11 @@ import com.finca.app.application.service.finca.FincaService;
 import com.finca.app.domain.models.Finca;
 import com.finca.app.infrastructure.exceptions.GenericErrorException;
 import com.finca.app.infrastructure.exceptions.GenericNoContentException;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class FincaServiceImpl implements FincaService {
 
     private final FincaModelService fincaModelService;

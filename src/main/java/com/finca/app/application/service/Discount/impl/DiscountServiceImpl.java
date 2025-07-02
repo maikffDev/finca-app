@@ -13,6 +13,7 @@ import java.util.List;
 public class DiscountServiceImpl implements DiscountService {
     private final DiscountModelService discountModelService;
     private final DiscountDTOMapper discountDTOMapper;
+
     public DiscountServiceImpl(DiscountModelService discountModelService, DiscountDTOMapper discountDTOMapper) {
         this.discountModelService = discountModelService;
         this.discountDTOMapper = discountDTOMapper;

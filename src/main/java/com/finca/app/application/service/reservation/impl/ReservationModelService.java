@@ -62,4 +62,9 @@ public class ReservationModelService implements CreateReservationUseCase, Delete
     public Optional<Reservation> getByUserID(Long userID) {
         return findReservationUseCase.getByUserID(userID);
     }
+
+    @Override
+    public Optional<Reservation> getByReservationID(Long reservationID) {
+        return Optional.empty();
+    }
 }

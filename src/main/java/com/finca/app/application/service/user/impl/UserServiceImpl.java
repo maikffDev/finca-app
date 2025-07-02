@@ -6,10 +6,12 @@ import com.finca.app.application.mappers.UserDTOMapper;
 import com.finca.app.application.service.user.UserService;
 import com.finca.app.domain.models.User;
 
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+@Service
 public class UserServiceImpl implements UserService {
 
     private final UserModelService userModelService;

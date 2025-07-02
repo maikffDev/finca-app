@@ -3,6 +3,7 @@ package com.finca.app.application.usecases.user;
 import com.finca.app.domain.models.User;
 import com.finca.app.domain.ports.in.usuario.FindUserUseCase;
 import com.finca.app.domain.ports.out.UserModelPort;
+import org.springframework.context.annotation.Primary;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -11,6 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@Primary
 public class FindUserUseCaseImpl implements FindUserUseCase {
 
     private final UserModelPort userModelPort;

@@ -21,10 +21,10 @@ import java.util.List;
 public abstract class ReservationDTOMapper {
 
 
-    @Autowired
+   /* @Autowired
     UserModelService userModelService;
     @Autowired
-    HourHandModelService hourHandModelService;
+    HourHandModelService hourHandModelService;*/
 
 
     public abstract Reservation toModel(ReservationDTORequest reservationDto);

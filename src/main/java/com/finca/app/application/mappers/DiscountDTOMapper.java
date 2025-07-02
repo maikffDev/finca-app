@@ -8,7 +8,7 @@ import org.mapstruct.Mapper;
 import java.util.List;
 
 @Mapper(componentModel = "spring")
-public class DiscountDTOMapper {
+public abstract class DiscountDTOMapper {
     public abstract Discount toModel(DiscountDTORequest discountDto);
 
     public abstract DiscountDTOResponse toDto(Discount discount);

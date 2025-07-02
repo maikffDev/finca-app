@@ -12,4 +12,6 @@ public interface FindReservationUseCase {
 
     Optional<Reservation> getByUserID(Long userID);
 
+    Optional<Reservation> getByReservationID(Long reservationID);
+
 }

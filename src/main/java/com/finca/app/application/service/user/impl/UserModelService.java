@@ -19,7 +19,7 @@ public class UserModelService implements CreateUserUseCase, DeleteUserUseCase, U
 
     private final CreateUserUseCase createUserUseCase;
     private final DeleteUserUseCase deleteUserUseCase;
-    private UpdateUserUseCase updateUserUseCase;
+    private final UpdateUserUseCase updateUserUseCase;
     private final FindUserUseCase findUserUseCase;
 
 

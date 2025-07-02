@@ -4,10 +4,12 @@ import com.finca.app.application.dto.reservation.ReservationDTORequest;
 import com.finca.app.domain.models.Reservation;
 import com.finca.app.domain.ports.in.reservation.CreateReservationUseCase;
 import com.finca.app.domain.ports.out.ReservationModelPort;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 import com.finca.app.domain.ports.in.reservation.CreateReservationUseCase;
 
 @Service
+@Primary
 public class CreateReservationUseCaseImpl implements CreateReservationUseCase {
     private final ReservationModelPort reservationModelPort;
 
