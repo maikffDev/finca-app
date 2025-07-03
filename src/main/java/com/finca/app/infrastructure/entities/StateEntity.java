@@ -11,6 +11,7 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
+@Table(name = "state_entity")
 public class StateEntity {
 
     @Id
@@ -19,11 +20,11 @@ public class StateEntity {
 
     private String description;
 
-    @OneToMany
-    @JoinColumn(name = "ticket_id", nullable = false)
-    private List<TicketEntity> tickets = new ArrayList<>();
-
-    @OneToMany
-    @JoinColumn(name = "stateHistoryId")
-    private List<StateHistoryEntity> stateHistoryEntity;
+    @OneToMany(mappedBy = "state")
+    private List<StateHistoryEntity> stateHistories;
 }
+
+
+/*@OneToMany
+    @JoinColumn(name = "ticket_id", nullable = false)
+    private List<TicketEntity> tickets = new ArrayList<>();*/

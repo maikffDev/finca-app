@@ -16,19 +16,20 @@ import java.util.Set;
 @Getter
 @Setter
 @Entity
-@Table(name = "finca")
+@Table(name = "finca_entity")
 public class FincaEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true)
+    @Column(unique = false)
     private String name;
 
-    @Column(unique = true)
+    @Column(unique = false)
     private String ubication;
 
+    @Column(name="price_per_hour")
     private double pricePerHour;
 
     @ManyToOne
@@ -44,9 +45,9 @@ public class FincaEntity {
 
     @ManyToMany
     @JoinTable(
-            name = "Amenitie_FINCA",
-            joinColumns = @JoinColumn(name = "fincaID"),
-            inverseJoinColumns = @JoinColumn(name = "amenitieID")
+            name = "amenitie_finca",
+            joinColumns = @JoinColumn(name = "finca_id"),
+            inverseJoinColumns = @JoinColumn(name = "amenitie_id")
     )
     private Set<AmenitieEntity> amenities;
 

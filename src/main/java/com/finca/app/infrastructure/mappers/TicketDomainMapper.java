@@ -7,9 +7,9 @@ import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring")
 public abstract class TicketDomainMapper {
-    @Mapping(source = "paymentMethod", target = "paymentMethodEntity")
+    @Mapping(source = "paymentMethod", target = "paymentMethod")
     public abstract TicketEntity toEntity(Ticket ticket);
 
-    @Mapping(source = "paymentMethodEntity", target = "paymentMethod")
+    @Mapping(source = "paymentMethod", target = "paymentMethod")
     public abstract Ticket toDomain(TicketEntity ticketEntity);
 }

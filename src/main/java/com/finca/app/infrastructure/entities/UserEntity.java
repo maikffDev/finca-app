@@ -12,32 +12,35 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-@Table (name = "usuario")
+@Table (name = "user_entity")
 public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
 
-    @Column(unique=true,nullable=false)
+    @Column(unique=false,nullable=false)
     private String username;
 
 
-    @Column(unique = true,nullable=false)
+    @Column(unique = false,nullable=false)
     private String correo;
 
     @Column(nullable=false)
     private String contrasena;
 
+
+    @Column(name="int_fallidos_ingreso")
     private int intFallidosIngreso;
 
     private boolean activo;
 
-    /*@ManyToOne
-    @JoinColumn(name = "rol_id")
-    private RoleEntity rolId;*/
-
     @ManyToMany
+    @JoinTable(
+            name = "usuario_role",  // nombre explícito para la tabla intermedia
+            joinColumns = @JoinColumn(name = "user_id"),      // columna FK hacia usuario
+            inverseJoinColumns = @JoinColumn(name = "role_id") // columna FK hacia role
+    )
     private List<RoleEntity>rolesId;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)

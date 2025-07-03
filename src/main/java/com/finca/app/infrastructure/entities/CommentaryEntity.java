@@ -8,6 +8,7 @@ import lombok.*;
 @Getter
 @Setter
 @Entity
+@Table(name = "commentary_entity")
 public class CommentaryEntity {
 
     @Id

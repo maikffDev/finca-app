@@ -13,13 +13,14 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-@Table(name = "Permission")
+@Table(name = "permission_entity")
 public class PermissionEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "permission_name")
     private String permissionName;
 
     @ManyToMany

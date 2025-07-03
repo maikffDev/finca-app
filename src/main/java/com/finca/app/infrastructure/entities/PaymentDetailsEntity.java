@@ -12,7 +12,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "PaymentDetails")
+@Table(name = "payment_details_entity")
 public class PaymentDetailsEntity {
 
     @Id
@@ -20,6 +20,7 @@ public class PaymentDetailsEntity {
     private Long id;
 
     @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
     private UserEntity user;
 
     private int CBU;

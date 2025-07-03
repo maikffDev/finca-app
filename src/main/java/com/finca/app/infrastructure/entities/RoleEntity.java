@@ -10,19 +10,20 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
+@Table(name = "role_entity")
 public class RoleEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true,nullable=false)
+    @Column(name="role_name",unique = false,nullable=false)
     private String roleName;
 
     @ManyToMany
     private List<PermissionEntity> permissions;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "rolesId")
     private List<UserEntity>users;
 
 }

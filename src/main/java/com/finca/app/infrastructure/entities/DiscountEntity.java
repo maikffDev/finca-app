@@ -11,16 +11,17 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
+@Table(name = "discount_entity")
 public class DiscountEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true,nullable=false)
+    @Column(unique = false,nullable=false)
     private String name;
 
-    @Column(nullable=false)
+    @Column(name="discount_percentage",nullable=false)
     private Double discountPercentage;
 
     @OneToMany(mappedBy = "discount", cascade = CascadeType.ALL, orphanRemoval = true)

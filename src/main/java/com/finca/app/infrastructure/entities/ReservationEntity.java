@@ -13,6 +13,7 @@ import java.util.List;
 @Setter
 @Builder
 @Entity
+@Table(name = "reservation_entity")
 public class ReservationEntity {
 
     @Id
@@ -20,22 +21,24 @@ public class ReservationEntity {
     private Long id;
 
     @OneToMany
-    @JoinColumn(name = "fincaHorarioID", nullable = false)
-    private List<FincaHourHandEntity>fincaHourHandEntity;
+    @JoinColumn(name = "reservation_id") // FK en finca_hour_hand_entity
+    private List<FincaHourHandEntity> fincaHourHandEntity;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
     private UserEntity userEntity;
 
-    @OneToOne
+    @OneToOne(mappedBy = "reservationEntity", cascade = CascadeType.ALL)
     private TicketEntity ticketEntity;
 
     private boolean active;
 
+    @Column(name = "expiration_date")
     private LocalDate expirationDate;
 
+    @Column(name = "total_cost")
     private BigDecimal totalCost;
 
-    @OneToMany(mappedBy = "reservationEntity", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "reservation", cascade = CascadeType.ALL)
     private List<StateHistoryEntity> stateHistoryEntity;
 }

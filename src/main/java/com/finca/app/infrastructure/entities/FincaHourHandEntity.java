@@ -3,12 +3,14 @@ package com.finca.app.infrastructure.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @Entity
-@Table(name = "FincaHourHand")
+@Table(name = "finca_hour_hand_entity")
 public class FincaHourHandEntity {
 
     @Id
@@ -16,14 +18,16 @@ public class FincaHourHandEntity {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "fincaID", nullable = false)
+    @JoinColumn(name = "finca_id", nullable = false)
     private FincaEntity finca;
 
     @ManyToOne
-    @JoinColumn(name = "horarioID", nullable = false)
+    @JoinColumn(name = "hour_hand_id", nullable = false)
     private HourHandEntity hourHandEntity;
 
     private boolean reserved;
 
+    @Column(name = "price_per_hour")
     private double pricePerHour;
+
 }

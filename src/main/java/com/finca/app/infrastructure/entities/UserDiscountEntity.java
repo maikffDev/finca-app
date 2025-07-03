@@ -13,6 +13,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
+@Table(name = "user_discount_entity")
 public class UserDiscountEntity {
 
     @Id
@@ -27,7 +28,10 @@ public class UserDiscountEntity {
     @JoinColumn(name = "discount_id", nullable = false)
     private DiscountEntity discount;
 
+    @Column(name ="number_of_uses")
     private int numberOfUses;
+
     private boolean active;
+
 
 }
