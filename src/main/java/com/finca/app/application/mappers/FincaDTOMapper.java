@@ -2,7 +2,7 @@ package com.finca.app.application.mappers;
 
 import com.finca.app.application.dto.finca.FincaDTORequest;
 import com.finca.app.application.dto.finca.FincaDTOResponse;
-import com.finca.app.application.service.user.impl.UserModelService;
+import com.finca.app.application.services.user.impl.UserModelService;
 import com.finca.app.application.util.GenericErrorException;
 import com.finca.app.domain.models.Finca;
 import com.finca.app.domain.models.User;

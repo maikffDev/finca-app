@@ -12,7 +12,7 @@ public abstract class ScheduleDTOMapper {
 
     public abstract Schedule toModel(ScheduleDTORequest dto);
 
-    public abstract ScheduleDTOResponse toDTO(Schedule model);
+    public abstract ScheduleDTOResponse toDto(Schedule model);
 
-    public abstract List<ScheduleDTOResponse> toDTOList(List<Schedule> models);
+    public abstract List<ScheduleDTOResponse> toDtoList(List<Schedule> models);
 }

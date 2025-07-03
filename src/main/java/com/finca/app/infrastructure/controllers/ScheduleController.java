@@ -2,7 +2,7 @@ package com.finca.app.infrastructure.controllers;
 
 import com.finca.app.application.dto.schedule.ScheduleDTORequest;
 import com.finca.app.application.dto.schedule.ScheduleDTOResponse;
-import com.finca.app.application.service.schedule.ScheduleService;
+import com.finca.app.application.services.schedule.ScheduleService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;

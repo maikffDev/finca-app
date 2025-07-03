@@ -19,7 +19,7 @@ public class ReservationEntity {
 
     @OneToMany
     @JoinColumn(name = "fincaHorarioID", nullable = false)
-    private List<FincaHourHandEntity>fincaHourHandEntity;
+    private List<FincaScheduleEntity> fincaScheduleEntity;
 
     @ManyToOne
     @JoinColumn(name = "user_id")

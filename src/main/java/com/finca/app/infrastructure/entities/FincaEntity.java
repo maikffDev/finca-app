@@ -1,14 +1,11 @@
 package com.finca.app.infrastructure.entities;
 
-import com.finca.app.domain.models.Schedule;
 import jakarta.persistence.*;
 import lombok.*;
 
 
 import java.util.ArrayList;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 import java.util.Set;
 
 @AllArgsConstructor
@@ -40,7 +37,7 @@ public class FincaEntity {
     private boolean active;
 
     @OneToMany(mappedBy = "finca")
-    private List<FincaHourHandEntity> availableSchedules;
+    private List<FincaScheduleEntity> availableSchedules;
 
     @ManyToMany
     @JoinTable(

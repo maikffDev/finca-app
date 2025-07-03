@@ -2,7 +2,7 @@ package com.finca.app.infrastructure.controllers;
 
 import com.finca.app.application.dto.finca.FincaDTORequest;
 import com.finca.app.application.dto.finca.FincaDTOResponse;
-import com.finca.app.application.service.finca.FincaService;
+import com.finca.app.application.services.finca.FincaService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;

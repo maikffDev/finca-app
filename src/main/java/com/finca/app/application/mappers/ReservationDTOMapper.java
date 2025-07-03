@@ -1,8 +1,8 @@
 package com.finca.app.application.mappers;
 
 import com.finca.app.application.dto.reservation.ReservationDTORequest;
-import com.finca.app.application.service.schedule.ScheduleService;
-import com.finca.app.application.service.user.impl.UserModelService;
+import com.finca.app.application.services.schedule.ScheduleService;
+import com.finca.app.application.services.user.impl.UserModelService;
 import com.finca.app.domain.models.Reservation;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

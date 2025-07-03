@@ -1,8 +1,11 @@
 package com.finca.app.application.dto.finca;
 
+import com.finca.app.application.dto.schedule.ScheduleDTOResponse;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -15,4 +18,5 @@ public class FincaDTOResponse {
     private String description;
     private String pricePerHour;
     private Boolean active;
+    private List<ScheduleDTOResponse> schedules;
 }
