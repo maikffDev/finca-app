@@ -8,6 +8,7 @@ import lombok.*;
 @Getter
 @Setter
 @Entity
+@Table(name = "image_entity")
 public class ImageEntity {
 
     @Id
@@ -19,5 +20,6 @@ public class ImageEntity {
     @JoinColumn(name = "finca_id", nullable = false)
     private FincaEntity finca;
 
+    @Column(name = "url_image")
     private String urlImage;
 }

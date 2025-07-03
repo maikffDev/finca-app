@@ -11,4 +11,6 @@ public class Finca_HourHand {
     private Long id;
     private HourHand hourHand;
     private Finca finca;
+    private boolean reserved;
+    private double pricePerHour;
 }

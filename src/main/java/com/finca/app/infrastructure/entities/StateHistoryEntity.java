@@ -16,19 +16,20 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @Entity
+@Table(name = "state_history_entity")
 public class StateHistoryEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long stateHistoryId;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "state_id")
-    private StateEntity stateId;
+    private StateEntity state;
 
     @ManyToOne
     @JoinColumn(name = "reservation_id" , nullable = false)
-    private ReservationEntity reservationEntity;
+    private ReservationEntity reservation;
 
     private LocalDate fecha;
 }

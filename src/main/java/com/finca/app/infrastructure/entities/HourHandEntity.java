@@ -1,9 +1,6 @@
 package com.finca.app.infrastructure.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -14,6 +11,7 @@ import java.time.LocalTime;
 @Getter
 @Setter
 @Entity
+@Table(name = "hour_hand_entity")
 public class HourHandEntity {
 
     @Id
@@ -22,8 +20,10 @@ public class HourHandEntity {
 
     private LocalDate date;
 
+    @Column(name = "arrival_time")
     private LocalTime arrivalTime;
 
+    @Column(name = "departure_time")
     private LocalTime departureTime;
 
 }

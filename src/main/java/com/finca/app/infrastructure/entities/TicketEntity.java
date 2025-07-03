@@ -10,6 +10,7 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @Entity
+@Table(name = "ticket_entity")
 public class TicketEntity {
 
     @Id
@@ -22,13 +23,9 @@ public class TicketEntity {
     @JoinColumn(name = "reservation_id", nullable = false)
     private ReservationEntity reservationEntity;
 
-    @ManyToOne
-    @JoinColumn(name = "payment_method_id", nullable = false)
-    private PaymentMethodEntity paymentMethodEntity;
+    @Column(name="payment_method")
+    private String paymentMethod;
 
-    @ManyToOne
-    @JoinColumn(name = "state_id", nullable = false)
-    private StateEntity stateEntity;
-
+    @Column(name="payment_date")
     private LocalDate paymentDate;
 }

@@ -4,10 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Season {
+@Data
+public class Discount_User {
     private Long id;
-    private String seasonName;
+    private Long discountID;
+    private Long userID;
+    private Long cantUse;
+    private Boolean status;
 }

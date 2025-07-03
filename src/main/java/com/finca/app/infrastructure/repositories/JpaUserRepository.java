@@ -17,11 +17,13 @@ public interface JpaUserRepository extends JpaRepository<UserEntity, Long> {
 
     Optional<UserEntity> findByUsername(String username);
 
-    @Query("SELECT u FROM UserEntity u " +
-            "WHERE (:nombre IS NULL OR LOWER(u.nombre) LIKE LOWER(CONCAT('%', :nombre, '%'))) " +
-            "AND (:activo IS NULL OR u.activo = :activo)")
+    @Query("""
+        SELECT u FROM UserEntity u
+        WHERE (:username IS NULL OR LOWER(u.username) LIKE LOWER(CONCAT('%', :username, '%')))
+        AND (:activo IS NULL OR u.activo = :activo)
+    """)
     Page<UserEntity> filterUsersByParams(Pageable pageable,
-                                         @Param("nombre") String nombre,
+                                         @Param("username") String username,
                                          @Param("activo") Boolean activo);
 
     boolean existsByCorreo(String correo);

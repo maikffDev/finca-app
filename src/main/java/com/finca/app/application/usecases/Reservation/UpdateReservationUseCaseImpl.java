@@ -4,9 +4,11 @@ import com.finca.app.domain.models.Reservation;
 
 import com.finca.app.domain.ports.in.reservation.UpdateReservationUseCase;
 import com.finca.app.domain.ports.out.ReservationModelPort;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 @Service
+@Primary
 public class UpdateReservationUseCaseImpl implements UpdateReservationUseCase {
     private final ReservationModelPort reservationModelPort;
 

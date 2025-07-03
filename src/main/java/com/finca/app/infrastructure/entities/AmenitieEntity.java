@@ -10,16 +10,17 @@ import java.util.Set;
 @Getter
 @Setter
 @Entity
+@Table(name = "amenitie_entity")
 public class AmenitieEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true,nullable=false)
+    @Column
     private String nombre;
 
-    @Column(unique = true,nullable=false)
+    @Column(name= "tipo_De_Amenitie")
     private String tipoDeAmenitie;
 
     @ManyToMany(mappedBy = "amenities")
