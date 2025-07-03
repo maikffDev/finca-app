@@ -12,6 +12,7 @@ public interface CommentaryService {
     List<CommentaryDtoResponse> getByUserId(Long userId);
     CommentaryDtoResponse update(Long commentaryId, ComentaryDtoRequest commentaryDtoToUpdate);
     CommentaryDtoResponse delete(Long commentaryId);
+
     List<CommentaryDtoResponse> getByFincaId(Long fincaId);
 }
 
