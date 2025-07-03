@@ -1,11 +1,9 @@
-package com.finca.app.application.service.Discount;
+package com.finca.app.application.service.discount;
 
 import com.finca.app.application.dto.discount.DiscountDTORequest;
 import com.finca.app.application.dto.discount.DiscountDTOResponse;
-import com.finca.app.domain.models.Discount;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface DiscountService {
     DiscountDTOResponse create(DiscountDTORequest discountDto);

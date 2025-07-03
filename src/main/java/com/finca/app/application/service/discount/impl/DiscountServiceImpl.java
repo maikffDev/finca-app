@@ -1,12 +1,11 @@
-package com.finca.app.application.service.Discount.impl;
+package com.finca.app.application.service.discount.impl;
 
 import com.finca.app.application.dto.discount.DiscountDTORequest;
 import com.finca.app.application.dto.discount.DiscountDTOResponse;
 import com.finca.app.application.mappers.DiscountDTOMapper;
-import com.finca.app.application.service.Discount.DiscountService;
+import com.finca.app.application.service.discount.DiscountService;
 import com.finca.app.application.service.util.GenericErrorException;
 import com.finca.app.domain.models.Discount;
-import com.finca.app.infrastructure.exceptions.GenericNoContentException;
 
 import java.util.List;
 

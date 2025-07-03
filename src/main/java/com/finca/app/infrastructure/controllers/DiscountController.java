@@ -2,7 +2,7 @@ package com.finca.app.infrastructure.controllers;
 
 import com.finca.app.application.dto.discount.DiscountDTORequest;
 import com.finca.app.application.dto.discount.DiscountDTOResponse;
-import com.finca.app.application.service.Discount.DiscountService;
+import com.finca.app.application.service.discount.DiscountService;
 import com.finca.app.infrastructure.exceptions.DomainValidationException;
 import com.finca.app.infrastructure.exceptions.GenericErrorException;
 import jakarta.validation.Valid;

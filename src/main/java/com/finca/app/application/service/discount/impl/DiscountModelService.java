@@ -1,7 +1,5 @@
-package com.finca.app.application.service.Discount.impl;
+package com.finca.app.application.service.discount.impl;
 
-import com.finca.app.application.dto.discount.DiscountDTOResponse;
-import com.finca.app.application.service.finca.impl.FincaModelService;
 import com.finca.app.domain.models.Discount;
 import com.finca.app.domain.ports.in.discount.CreateDiscountUseCase;
 import com.finca.app.domain.ports.in.discount.DeleteDiscountUseCase;
