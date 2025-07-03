@@ -21,6 +21,11 @@ public class RoleEntity {
     private String roleName;
 
     @ManyToMany
+    @JoinTable(
+            name = "role_permission",
+            joinColumns = @JoinColumn(name = "role_id"),
+            inverseJoinColumns = @JoinColumn(name = "permission_id")
+    )
     private List<PermissionEntity> permissions;
 
     @ManyToMany(mappedBy = "rolesId")

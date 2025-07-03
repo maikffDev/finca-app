@@ -23,7 +23,7 @@ public class PermissionEntity {
     @Column(name = "permission_name")
     private String permissionName;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "permissions")
     private List<RoleEntity> roles;
 
 
