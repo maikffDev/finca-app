@@ -13,7 +13,7 @@ public interface FincaService {
 
     FincaDTOResponse getById(Long id);
 
-    FincaDTOResponse getByUser(String user);
+    FincaDTOResponse getByName(String name);
 
     FincaDTOResponse update(Long fincaId, FincaDTORequest fincaDtoToUpdate);
 

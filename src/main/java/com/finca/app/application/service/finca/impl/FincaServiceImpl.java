@@ -43,8 +43,8 @@ public class FincaServiceImpl implements FincaService {
     }
 
     @Override
-    public FincaDTOResponse getByUser(String username){
-        Finca finca = fincaModelService.getByUsername(username).orElseThrow(() -> new GenericNoContentException("Finca with username '" + username + "' not found."));
+    public FincaDTOResponse getByName(String name){
+        Finca finca = fincaModelService.getByName(name).orElseThrow(() -> new GenericNoContentException("Finca with name '" + name + "' not found."));
         return fincaDTOMapper.toDto(finca);
     }
 
@@ -56,7 +56,7 @@ public class FincaServiceImpl implements FincaService {
         finca.setUbication(fincaToUpdate.getUbication());
         finca.setPricePerHour(fincaToUpdate.getPricePerHour());
         finca.setDescription(fincaToUpdate.getDescription());
-        finca.setActive(fincaToUpdate.isActive());
+        finca.setActive(fincaToUpdate.getActive());
         Finca updatedFinca = fincaModelService.update(finca);
         return fincaDTOMapper.toDto(updatedFinca);
     }

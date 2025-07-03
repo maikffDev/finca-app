@@ -49,8 +49,8 @@ public class FincaModelService implements CreateFincaUseCase, DeleteFincaUseCase
     }
 
     @Override
-    public Optional<Finca> getByUsername(String usename){
-        return findFincaUseCase.getByUsername(usename);
+    public Optional<Finca> getByName(String name){
+        return findFincaUseCase.getByName(name);
     }
 
     @Override

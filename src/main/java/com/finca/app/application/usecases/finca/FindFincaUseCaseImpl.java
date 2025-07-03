@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Primary
 @Service
 public class FindFincaUseCaseImpl implements FindFincaUseCase {
 
@@ -30,7 +29,7 @@ public class FindFincaUseCaseImpl implements FindFincaUseCase {
     }
 
     @Override
-    public Optional<Finca> getByUsername(String username){
-        return fincaModelPort.findByUsername(username);
+    public Optional<Finca> getByName(String name){
+        return fincaModelPort.findByName(name);
     }
 }

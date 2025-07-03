@@ -12,7 +12,7 @@ public interface FincaModelPort {
 
     Optional<Finca> findById(Long id);
 
-    Optional<Finca> findByUsername(String username);
+    Optional<Finca> findByName(String name);
 
     Finca update(Finca finca);
 

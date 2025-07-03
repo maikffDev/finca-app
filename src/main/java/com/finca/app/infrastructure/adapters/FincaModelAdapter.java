@@ -55,8 +55,8 @@ public class FincaModelAdapter implements FincaModelPort {
     }
 
     @Override
-    public Optional<Finca> findByUsername(String username){
-        return jpaFincaRepository.findByUser_Username(username).map(fincaDomainMapper::toDomainModel);
+    public Optional<Finca> findByName(String name){
+        return jpaFincaRepository.findByUser_Username(name).map(fincaDomainMapper::toDomainModel);
     }
 
     @Override

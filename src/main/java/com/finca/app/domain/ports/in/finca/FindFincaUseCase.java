@@ -10,5 +10,5 @@ public interface FindFincaUseCase {
 
     Optional<Finca> getById(Long id);
 
-    Optional<Finca> getByUsername(String username);
+    Optional<Finca> getByName(String name);
 }

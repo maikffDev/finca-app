@@ -36,9 +36,9 @@ public class FincaController {
         return fincaService.getById(fincaId);
     }
 
-    @GetMapping("/getByUser/{username}")
-    public FincaDTOResponse getByUsername(@PathVariable("username") String username){
-        return fincaService.getByUser(username);
+    @GetMapping("/getByName/{name}")
+    public FincaDTOResponse getByName(@PathVariable("name") String name){
+        return fincaService.getByName(name);
     }
 
     @PutMapping("/{id}")

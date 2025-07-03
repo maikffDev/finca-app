@@ -6,7 +6,6 @@ import com.finca.app.domain.ports.out.FincaModelPort;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-@Primary
 @Service
 public class UpdateFincaUseCaseImpl implements UpdateFincaUseCase {
 

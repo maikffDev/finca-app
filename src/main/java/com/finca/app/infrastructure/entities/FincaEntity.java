@@ -13,8 +13,8 @@ import java.util.Set;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
+@Builder
+@Data
 @Entity
 @Table(name = "finca")
 public class FincaEntity {
