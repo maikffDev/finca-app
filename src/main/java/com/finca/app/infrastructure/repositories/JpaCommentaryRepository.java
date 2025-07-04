@@ -15,5 +15,5 @@ public interface JpaCommentaryRepository extends JpaRepository<CommentaryEntity 
 
     List<CommentaryEntity> findAllByUser_UserId(Long userId);
 
-    List<CommentaryEntity> findAllByFinca_FincaId(Long fincaId);
+    List<CommentaryEntity> findAllByFinca_Id(Long fincaId);
 }

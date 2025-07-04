@@ -6,11 +6,13 @@ import com.finca.app.infrastructure.entities.CommentaryEntity;
 import com.finca.app.infrastructure.mappers.CommentaryDomainMapper;
 import com.finca.app.infrastructure.repositories.JpaCommentaryRepository;
 import jakarta.transaction.Transactional;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+@Service
 public class CommentaryModelAdapter implements CommentaryModelPort {
 
     private final JpaCommentaryRepository jpaCommentaryRepository;
@@ -69,7 +71,7 @@ public class CommentaryModelAdapter implements CommentaryModelPort {
 
     @Override
     public List<Commentary> getByFincaId(Long fincaId) {
-        return jpaCommentaryRepository.findAllByFinca_FincaId(fincaId)
+        return jpaCommentaryRepository.findAllByFinca_Id(fincaId)
                 .stream()
                 .map(commentaryDomainMapper::toDomainModel)
                 .collect(Collectors.toList());

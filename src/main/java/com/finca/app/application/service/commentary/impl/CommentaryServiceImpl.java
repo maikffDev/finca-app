@@ -5,10 +5,12 @@ import com.finca.app.application.dto.commentary.CommentaryDtoResponse;
 import com.finca.app.application.mappers.CommentaryDTOMapper;
 import com.finca.app.application.service.commentary.CommentaryService;
 import com.finca.app.domain.models.Commentary;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class CommentaryServiceImpl implements CommentaryService {
 
     private final CommentaryModelService commentaryModelService;

@@ -21,5 +21,5 @@ public class UserDtoRequest {
     private boolean Activo;
 
     @NotNull(message = "Role is required. An id must be provided")
-    private boolean rollId;
+    private Long rollId;
 }
