@@ -4,9 +4,11 @@ package com.finca.app.infrastructure.adapters;
 import com.finca.app.domain.models.Finca;
 import com.finca.app.domain.ports.out.FincaModelPort;
 import com.finca.app.infrastructure.entities.FincaEntity;
+import com.finca.app.infrastructure.entities.UserEntity;
 import com.finca.app.infrastructure.exceptions.GenericErrorException;
 import com.finca.app.infrastructure.mappers.FincaDomainMapper;
 import com.finca.app.infrastructure.repositories.JpaFincaRepository;
+import com.finca.app.infrastructure.repositories.JpaUserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,25 +20,40 @@ public class FincaModelAdapter implements FincaModelPort {
 
     private final JpaFincaRepository jpaFincaRepository;
     private final FincaDomainMapper fincaDomainMapper;
+    private final JpaUserRepository jpaUserRepository;
 
-    public FincaModelAdapter(JpaFincaRepository jpaFincaRepository, FincaDomainMapper fincaDomainMapper){
+    public FincaModelAdapter(JpaFincaRepository jpaFincaRepository, JpaUserRepository jpaUserRepository, FincaDomainMapper fincaDomainMapper){
         this.jpaFincaRepository = jpaFincaRepository;
         this.fincaDomainMapper = fincaDomainMapper;
+        this.jpaUserRepository = jpaUserRepository;
     }
 
     @Override
     public Finca save(Finca finca){
-        try{
-            if (jpaFincaRepository.existsByName(finca.getName())){
+        try {
+            if (jpaFincaRepository.existsByName(finca.getName())) {
                 throw new GenericErrorException("Name is already in use");
             }
-            if (jpaFincaRepository.existsByUbication(finca.getUbication())){
+            if (jpaFincaRepository.existsByUbication(finca.getUbication())) {
                 throw new GenericErrorException("Ubication is already in use");
             }
+
+            Long userId = finca.getUser() != null ? finca.getUser().getUserId() : null;
+            if (userId == null) {
+                throw new GenericErrorException("User id must not be null");
+            }
+
+            UserEntity userEntity = jpaUserRepository.findById(userId)
+                    .orElseThrow(() -> new RuntimeException("User with id '" + userId + "' not found."));
+
             FincaEntity fincaEntity = fincaDomainMapper.fromDomainModel(finca);
+            fincaEntity.setUser(userEntity);
+
             FincaEntity newFincaEntity = jpaFincaRepository.save(fincaEntity);
+
             return fincaDomainMapper.toDomainModel(newFincaEntity);
-        }catch (GenericErrorException e){
+
+        } catch (GenericErrorException e) {
             throw e;
         } catch (Exception e) {
             throw new GenericErrorException(e.getMessage());

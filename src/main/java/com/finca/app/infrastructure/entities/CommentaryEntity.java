@@ -23,4 +23,7 @@ public class CommentaryEntity {
     @JoinColumn(name = "finca_id")
     private FincaEntity finca;
 
+
+    private String description;
+
 }

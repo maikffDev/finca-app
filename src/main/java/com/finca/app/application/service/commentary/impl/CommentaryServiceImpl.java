@@ -33,7 +33,14 @@ public class CommentaryServiceImpl implements CommentaryService {
     public CommentaryDtoResponse getById(Long commentaryId) {
         Commentary commentary = commentaryModelService.getById(commentaryId)
                 .orElseThrow(() -> new RuntimeException("Commentary with id '" + commentaryId + "' not found."));
+
+        System.out.println("-------------------------------------------");
+        System.out.println("Commentario UsuarioId " + commentary.getUser().getUserId());
+        System.out.println("Commentario FincaId " + commentary.getFinca().getId());
+        System.out.println("-------------------------------------------");
         return commentaryDTOMapper.toDto(commentary);
+
+
     }
 
     @Override
