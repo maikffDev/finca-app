@@ -1,14 +1,17 @@
 package com.finca.app.domain.models;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Builder
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Commentary {
 
+   private Long commentaryId;
    private User user;
    private Finca finca;
    private Reservation reservation;

@@ -41,11 +41,10 @@
  (1, 1),
  (1, 2);
 
- -- Comentarios
- INSERT INTO commentary_entity (id, user_id, finca_id) VALUES
- (1, 1, 1),
- (2, 2, 1);
-
+-- Comentarios
+ INSERT INTO commentary_entity (id, user_id, finca_id, description) VALUES
+ (1, 1, 1,'PEPEPEPEPEPEPEPEPEPEPPE'),
+ (2, 2, 1,'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA');
  -- Descuentos
  INSERT INTO discount_entity (id, name, discount_percentage) VALUES
  (1, 'Primera reserva', 10.0);

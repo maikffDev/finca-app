@@ -20,7 +20,10 @@ public class CommentaryEntity {
     private UserEntity user;
 
     @ManyToOne
-    @JoinColumn(name = "finca_id", nullable = false)
+    @JoinColumn(name = "finca_id")
     private FincaEntity finca;
+
+
+    private String description;
 
 }
