@@ -72,16 +72,16 @@
  (2, 'Pagado');
 
  -- Reserva
- INSERT INTO reservation_entity (id, user_id, active, expiration_date, total_cost) VALUES
- (1, 1, true, '2025-07-31', 6000.00);
+ --INSERT INTO reservation_entity (id, user_id, active, expiration_date, total_cost) VALUES
+ --(1, 1, true, '2025-07-31', 6000.00);
 
  -- Histórico de estados
- INSERT INTO state_history_entity (id, state_id, reservation_id, fecha) VALUES
- (1, 1, 1, '2025-07-03');
+ --INSERT INTO state_history_entity (id, state_id, reservation_id, fecha) VALUES
+ --(1, 1, 1, '2025-07-03');
 
  -- Ticket
- INSERT INTO ticket_entity (id, reservation_id, total, payment_method, payment_date) VALUES
- (1, 1, 6000.00, 'MercadoPago', '2025-07-03');
+ --INSERT INTO ticket_entity (id, reservation_id, total, payment_method, payment_date) VALUES
+ --(1, 1, 6000.00, 'MercadoPago', '2025-07-03');
 
  -- Métodos de pago
  INSERT INTO payment_details_entity (id, user_id, cbu, alias) VALUES

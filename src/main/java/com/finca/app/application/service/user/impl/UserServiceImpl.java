@@ -41,6 +41,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public User getEntityById(Long userId) {
+        User user = userModelService.getById(userId).orElseThrow(() -> new RuntimeException("User with id '" + userId + "' not found."));
+        return user;
+    }
+
+    @Override
     public UserDtoResponse getByUsername(String username) {
         User user = userModelService.getByUsername(username)
                 .orElseThrow(() -> new RuntimeException("User with username " + username + " not found."));

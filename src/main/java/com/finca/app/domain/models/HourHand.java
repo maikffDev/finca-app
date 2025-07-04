@@ -13,6 +13,6 @@ import java.time.LocalTime;
 public class HourHand {
     private Long HourHandID;
     private LocalDate date;
-    private LocalTime startTime;
-    private LocalTime endTime;
+    private LocalTime arrivalTime;
+    private LocalTime departureTime;
 }

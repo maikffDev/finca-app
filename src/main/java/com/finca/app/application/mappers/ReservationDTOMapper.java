@@ -5,10 +5,7 @@ import com.finca.app.application.dto.reservation.ReservationDTORequest;
 import com.finca.app.application.dto.reservation.ReservationDTOResponse;
 import com.finca.app.application.service.hourhand.impl.HourHandModelService;
 import com.finca.app.application.service.user.impl.UserModelService;
-import com.finca.app.domain.models.Finca;
-import com.finca.app.domain.models.Finca_HourHand;
-import com.finca.app.domain.models.Reservation;
-import com.finca.app.domain.models.Ticket;
+import com.finca.app.domain.models.*;
 import org.mapstruct.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -33,14 +30,32 @@ public abstract class ReservationDTOMapper {
 
     public abstract List<ReservationDTOResponse> toDtoList(List<Reservation> reservations);
 
-    public Reservation fromDTOtoNewModel(ReservationDTORequest reservationDto, BigDecimal totalCostOfModel,List<Finca_HourHand> fincasHourHand){
+    public Reservation fromDTOtoNewModel(ReservationDTORequest reservationDto, BigDecimal totalCostOfModel, List<Finca_HourHand> fincasHourHand, User user){
 
         return  Reservation.builder()
                 .fincaHourHand(fincasHourHand)
-                .userID(reservationDto.getUser())
+                .userID(user)
                 .on(true)
                 .expiration(fincasHourHand.getLast().getHourHand().getDate())
-                .ticket(new Ticket())
+                .ticket(null)
+                .states(new LinkedList<>())
+                .totalCost(totalCostOfModel)
+                .build();
+
+    };
+
+    public Reservation fromDTOtoNewModel(ReservationDTORequest reservationDto, BigDecimal totalCostOfModel, Finca_HourHand fincasHourHand, User user){
+
+        LinkedList<Finca_HourHand> finquitasHoritas= new LinkedList<>();
+        finquitasHoritas.add(fincasHourHand);
+
+
+        return  Reservation.builder()
+                .fincaHourHand(finquitasHoritas)
+                .userID(user)
+                .on(true)
+                .expiration(fincasHourHand.getHourHand().getDate())
+                .ticket(null)
                 .states(new LinkedList<>())
                 .totalCost(totalCostOfModel)
                 .build();

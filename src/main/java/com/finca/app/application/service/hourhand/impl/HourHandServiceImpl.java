@@ -51,8 +51,8 @@ public class HourHandServiceImpl implements HourHandService {
                 .orElseThrow(() -> new GenericErrorException("CANNOT UPDATE. HourHand with id '" + dto.getHourHand() + "' not found."));
 
         existing.setDate(dto.getDate());
-        existing.setStartTime(dto.getStartTime());
-        existing.setEndTime(dto.getEndTime());
+        existing.setArrivalTime(dto.getStartTime());
+        existing.setDepartureTime(dto.getEndTime());
 
         HourHand updated = hourHand.update(existing);
         return hourHandDTOMapper.toDTO(updated);
@@ -72,7 +72,7 @@ public class HourHandServiceImpl implements HourHandService {
     public HourHandDTOResponse logicalDeletion(Long id) {
         HourHand model = hourHand.findById(id)
                 .orElseThrow(() -> new GenericErrorException("CANNOT DISABLE. HourHand with id '" + id + "' not found."));
-        model.setEndTime(null);
+        model.setDepartureTime(null);
         HourHand disabled = hourHand.logicalDeletion(model);
         return hourHandDTOMapper.toDTO(disabled);
     }
