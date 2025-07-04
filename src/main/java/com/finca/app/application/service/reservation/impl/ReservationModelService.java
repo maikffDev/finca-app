@@ -1,5 +1,6 @@
 package com.finca.app.application.service.reservation.impl;
 import com.finca.app.application.dto.reservation.ReservationDTORequest;
+import com.finca.app.application.dto.reservation.ReservationDTORequest2;
 import com.finca.app.domain.models.Reservation;
 import com.finca.app.domain.ports.in.reservation.CreateReservationUseCase;
 import com.finca.app.domain.ports.in.reservation.DeleteReservationUseCase;
@@ -34,7 +35,7 @@ public class ReservationModelService implements CreateReservationUseCase, Delete
     }
 
     @Override
-    public Reservation create(ReservationDTORequest reservation) {
+    public Reservation create(ReservationDTORequest2 reservation) {
         return createReservationUseCase.create(reservation);
     }
 

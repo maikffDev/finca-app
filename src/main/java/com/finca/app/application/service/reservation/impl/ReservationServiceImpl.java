@@ -1,6 +1,7 @@
 package com.finca.app.application.service.reservation.impl;
 
 import com.finca.app.application.dto.reservation.ReservationDTORequest;
+import com.finca.app.application.dto.reservation.ReservationDTORequest2;
 import com.finca.app.application.dto.reservation.ReservationDTOResponse;
 import com.finca.app.application.mappers.ReservationDTOMapper;
 import com.finca.app.application.service.reservation.ReservationService;
@@ -27,7 +28,7 @@ public  class ReservationServiceImpl implements ReservationService {
     }
 
     @Override
-    public ReservationDTOResponse create(ReservationDTORequest reservationDTORequest) {
+    public ReservationDTOResponse create(ReservationDTORequest2 reservationDTORequest) {
         //Reservation reservation = reservationDTOMapper.toModel(reservationDTORequest);
         Reservation newReservation = reservationModelService.create(reservationDTORequest);
         return reservationDTOMapper.toDto(newReservation);

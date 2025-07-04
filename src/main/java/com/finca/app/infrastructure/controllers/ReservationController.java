@@ -26,10 +26,12 @@ public class ReservationController {
     }
 
     @PostMapping
-    public ResponseEntity<ReservationDTOResponse> create(@Valid @RequestBody ReservationDTORequest request) {
+    public ResponseEntity<ReservationDTOResponse> create(@Valid @RequestBody ReservationDTORequest2 request) {
         ReservationDTOResponse created = reservationService.create(request);
         return new ResponseEntity<>(created, HttpStatus.CREATED);
     }
+
+
 
     /*@PostMapping
     public ResponseEntity<ReservationDTOResponse2> create2(@Valid @RequestBody ReservationDTORequest2 request) {

@@ -20,7 +20,7 @@ public class TicketEntity {
     private double total;
 
     @OneToOne
-    @JoinColumn(name = "reservation_id", nullable = false)
+    @JoinColumn(name = "reservation_id")
     private ReservationEntity reservationEntity;
 
     @Column(name="payment_method")

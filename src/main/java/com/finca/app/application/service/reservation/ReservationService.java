@@ -8,7 +8,7 @@ import com.finca.app.application.dto.reservation.ReservationDTOResponse2;
 import java.util.List;
 
 public interface ReservationService {
-    ReservationDTOResponse create(ReservationDTORequest ReservationDto);
+    ReservationDTOResponse create(ReservationDTORequest2 ReservationDto);
 
     List<ReservationDTOResponse> getAll();
 

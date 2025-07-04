@@ -5,6 +5,9 @@ import com.finca.app.infrastructure.entities.FincaHourHandEntity;
 import org.mapstruct.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Mapper(componentModel = "spring")
 public abstract class FincaHourHandDomainMapper {
 
@@ -21,6 +24,12 @@ public abstract class FincaHourHandDomainMapper {
                 .reserved(fincaHourHandEntity.isReserved())
                 .pricePerHour(fincaHourHandEntity.getPricePerHour())
                 .build();
+    }
+
+    public List<Finca_HourHand> fromEntitiesToModels(List<FincaHourHandEntity> entities) {
+        return entities.stream()
+                .map(this::fromEntityToModel)
+                .collect(Collectors.toList());
     }
 
 }

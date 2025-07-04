@@ -26,4 +26,13 @@ public class HourHandEntity {
     @Column(name = "departure_time")
     private LocalTime departureTime;
 
+    @Override
+    public String toString() {
+        return "HourHandEntity{" +
+                "id=" + id +
+                ", date=" + date +
+                ", arrivalTime=" + arrivalTime +
+                ", departureTime=" + departureTime +
+                '}';
+    }
 }

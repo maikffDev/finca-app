@@ -41,4 +41,18 @@ public class ReservationEntity {
 
     @OneToMany(mappedBy = "reservation", cascade = CascadeType.ALL)
     private List<StateHistoryEntity> stateHistoryEntity;
+
+    @Override
+    public String toString() {
+        return "ReservationEntity{" +
+                "id=" + id +
+                ", fincaHourHandEntity=" + fincaHourHandEntity +
+                ", userEntity=" + userEntity +
+                ", ticketEntity=" + ticketEntity +
+                ", active=" + active +
+                ", expirationDate=" + expirationDate +
+                ", totalCost=" + totalCost +
+                ", stateHistoryEntity=" + stateHistoryEntity +
+                '}';
+    }
 }

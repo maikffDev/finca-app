@@ -1,10 +1,14 @@
 package com.finca.app.infrastructure.mappers;
 
+import com.finca.app.application.dto.reservation.ReservationDTORequest2;
 import com.finca.app.application.mappers.FincaHourHandMapper;
 import com.finca.app.domain.models.Reservation;
+import com.finca.app.infrastructure.entities.FincaHourHandEntity;
 import com.finca.app.infrastructure.entities.ReservationEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+
+import java.util.List;
 
 @Mapper(componentModel = "spring", uses = {FincaHourHandMapper.class, UserDomainMapper.class, TicketDomainMapper.class})
 public abstract class ReservationDomainMapper {
@@ -26,5 +30,14 @@ public abstract class ReservationDomainMapper {
     @Mapping(source = "ticketEntity", target = "ticket")
     @Mapping(source = "stateHistoryEntity", target = "states")
     public abstract Reservation fromEntityToModel(ReservationEntity reservationEntity);
+
+
+    public ReservationEntity fromModelToEntity (Reservation reservationModel, List<FincaHourHandEntity> horariosEntity){
+        ReservationEntity reservationEntitySinHorariosBienSeteados = fromModelToEntity(reservationModel);
+        reservationEntitySinHorariosBienSeteados.setFincaHourHandEntity(horariosEntity);
+        ReservationEntity reservationEntityCONHorariosBIENSeteados = reservationEntitySinHorariosBienSeteados;
+
+        return reservationEntityCONHorariosBIENSeteados;
+    }
 
 }

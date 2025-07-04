@@ -30,4 +30,14 @@ public class FincaHourHandEntity {
     @Column(name = "price_per_hour")
     private double pricePerHour;
 
+    @Override
+    public String toString() {
+        return "FincaHourHandEntity{" +
+                "id=" + id +
+                ", finca=" + finca +
+                ", hourHandEntity=" + hourHandEntity +
+                ", reserved=" + reserved +
+                ", pricePerHour=" + pricePerHour +
+                '}';
+    }
 }
