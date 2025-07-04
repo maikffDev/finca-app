@@ -187,7 +187,7 @@ public class ReservationModelAdapter implements ReservationModelPort {
     private BigDecimal estimateTotal(@NotNull  List<Finca_HourHand> fincasHourHand){
         BigDecimal total= BigDecimal.valueOf(0);
         int preTotal=0;
-        int horasDeEstadiaDelHorario=0;
+        int duracionDeLaEstadia =0;
         HourHand horario=null;
         Finca finca=null;
 
@@ -197,13 +197,12 @@ public class ReservationModelAdapter implements ReservationModelPort {
                 finca = fincaHourHand.getFinca();
                 horario = fincaHourHand.getHourHand();
                 mostrarHorario(horario);
-                horasDeEstadiaDelHorario = (int) Duration.between(horario.getArrivalTime(), horario.getDepartureTime()).toHours();
-                preTotal += (int) (finca.getPricePerHour() * horasDeEstadiaDelHorario);
+                duracionDeLaEstadia = (int) Duration.between(horario.getArrivalTime(), horario.getDepartureTime()).toHours();
+                preTotal += (int) (finca.getPricePerHour() * duracionDeLaEstadia);
             }
         }catch (Exception e){
             throw new GenericErrorException("Error en estimateTotal , : "+e.getMessage());
         }
-
 
         return BigDecimal.valueOf(preTotal);
     }

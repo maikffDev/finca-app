@@ -31,6 +31,20 @@ public class CreateReservationUseCaseImpl implements CreateReservationUseCase {
     public Reservation create(ReservationDTORequest2 reservationDTO) {
         Reservation reservation= reservationModelPort.create(reservationDTO);
 
+        ReservationEntity reservationEntity= reservationModelPort.validateReservation(reservation,reservationDTO);
+        reservationEntity =reservationModelPort.save2(reservationEntity);
+        Ticket ticket=ticketModelPort.generateNewTicket2(reservationEntity);     //TODO hace que se llame al caso de uso, y no al model port. hay q arreglar esta cochinada
+        reservationEntity= reservationModelPort.addTicketToReservation(reservationEntity,ticket);
+        ReservationEntity reservationEntityComplete = reservationModelPort.save2(reservationEntity);
+
+        return reservationDomainMapper.fromEntityToModel(reservationEntityComplete);
+    }
+}
+
+/*@Override
+    public Reservation create(ReservationDTORequest2 reservationDTO) {
+        Reservation reservation= reservationModelPort.create(reservationDTO);
+
         System.out.println("Primer CREATE ");
         System.out.println(reservation);
         System.out.println("Primer CREATE ");
@@ -59,5 +73,4 @@ public class CreateReservationUseCaseImpl implements CreateReservationUseCase {
 
 
         return reservationDomainMapper.fromEntityToModel(reservationEntityComplete);
-    }
-}
+    }*/

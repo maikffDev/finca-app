@@ -37,9 +37,9 @@ public class UserEntity {
 
     @ManyToMany
     @JoinTable(
-            name = "usuario_role",  // nombre explícito para la tabla intermedia
-            joinColumns = @JoinColumn(name = "user_id"),      // columna FK hacia usuario
-            inverseJoinColumns = @JoinColumn(name = "role_id") // columna FK hacia role
+            name = "usuario_role",  
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id")
     )
     private List<RoleEntity>rolesId;
 
