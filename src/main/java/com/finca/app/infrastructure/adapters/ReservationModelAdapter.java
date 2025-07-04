@@ -53,7 +53,7 @@ public class ReservationModelAdapter implements ReservationModelPort {
         try {
             List<Finca_HourHand> fincasHourHand= fincaHourHandMapper.fromDTOsToModels(reservationDTO.getFincaHourHands());
             BigDecimal total = estimateTotal(fincasHourHand);
-            Optional<FincaHourHandEntity> fincaHorarioValidado = fincaHourHandRepository.findByFinca_IdAndHourHandEntity_Id(fincasHourHand.getFirst().getFinca().getId(),fincasHourHand.getFirst().getHourHand().getHourHandID() );  // TODO, corregir y setear en el lugar correcto del caso de uso antes de mostrar
+            Optional<FincaHourHandEntity> fincaHorarioValidado = fincaHourHandRepository.findByFinca_IdAndHourHandEntity_Id(fincasHourHand.getFirst().getFinca().getId(),fincasHourHand.getFirst().getHourHand().gethourHandID() );  // TODO, corregir y setear en el lugar correcto del caso de uso antes de mostrar
             Finca_HourHand fincaHourHandModel= fincaHourHandDomainMapper.fromEntityToModel(fincaHorarioValidado.orElseThrow());
             User user = userService.getEntityById(reservationDTO.getUserId());
             newReservation = reservationDTOMapper.fromDTOtoNewModel(reservationDTO,total,fincaHourHandModel,user);
@@ -62,6 +62,10 @@ public class ReservationModelAdapter implements ReservationModelPort {
         }
 
         return newReservation;
+    }
+
+    private void mostrarFf (FincaHourHandEntity fincaHourHand){
+
     }
 
     @Override

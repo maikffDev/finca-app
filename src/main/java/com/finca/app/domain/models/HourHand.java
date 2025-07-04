@@ -11,8 +11,14 @@ import java.time.LocalTime;
 @NoArgsConstructor
 @Data
 public class HourHand {
-    private Long HourHandID;
+    private Long hourHandID;
     private LocalDate date;
     private LocalTime arrivalTime;
     private LocalTime departureTime;
+
+    public Long gethourHandID() {
+        return this.hourHandID;
+    }
+
+
 }
