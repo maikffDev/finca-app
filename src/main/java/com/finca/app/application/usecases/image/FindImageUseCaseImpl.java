@@ -6,6 +6,7 @@ import com.finca.app.domain.models.Reservation;
 import com.finca.app.domain.ports.in.image.FindImageUseCase;
 import com.finca.app.domain.ports.in.reservation.FindReservationUseCase;
 import com.finca.app.domain.ports.out.ImageModelPort;
+import com.finca.app.infrastructure.entities.ImageEntity;
 import com.finca.app.infrastructure.mappers.ImageDomainMapper;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
@@ -27,6 +28,7 @@ public class FindImageUseCaseImpl implements FindImageUseCase {
 
     @Override
     public Optional<Image> getById(Long id) {
-        return imageModelPort.getById(id);
+        ImageEntity imageEntity =imageModelPort.getById(id).orElseThrow(()-> new RuntimeException("Error con getById"));
+        return Optional.ofNullable(imageDomainMapper.toDomain(imageEntity));
     }
 }

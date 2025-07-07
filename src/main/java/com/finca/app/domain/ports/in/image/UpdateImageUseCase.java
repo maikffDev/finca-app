@@ -4,5 +4,5 @@ import com.finca.app.domain.models.Discount;
 import com.finca.app.domain.models.Image;
 
 public interface UpdateImageUseCase {
-    Image update(Image discount);
+    Image update(Image image);
 }

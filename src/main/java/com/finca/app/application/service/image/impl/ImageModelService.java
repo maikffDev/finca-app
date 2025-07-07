@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-
+@Service
 public class ImageModelService implements CreateImageUseCase, DeleteImageUseCase, FindImageUseCase, UpdateImageUseCase {
 
     private final CreateImageUseCase createImageUseCase;

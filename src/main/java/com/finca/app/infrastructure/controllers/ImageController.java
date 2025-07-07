@@ -29,8 +29,8 @@ public class ImageController {
 
         ImageDTOResponse created = imageService.create(fincaId, urlImage);
         return ResponseEntity.status(HttpStatus.CREATED).body(created);
-    }
-    */
+    }*/
+
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
