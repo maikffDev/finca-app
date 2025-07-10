@@ -7,11 +7,11 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring")
-public interface HourHandDomainMapper {
+public abstract class HourHandDomainMapper {
 
     @Mapping(source = "id", target = "hourHandID")
-    HourHand toDomainModel(HourHandEntity entity);
+    public abstract HourHand toDomainModel(HourHandEntity entity);
 
     @Mapping(source = "hourHandID", target = "id")
-    HourHandEntity fromDomainModel(HourHand model);
+    public abstract HourHandEntity fromDomainModel(HourHand model);
 }

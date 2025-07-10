@@ -2,7 +2,7 @@ package com.finca.app.infrastructure.controllers;
 
 import com.finca.app.application.dto.user.UserDtoRequest;
 import com.finca.app.application.dto.user.UserDtoResponse;
-import com.finca.app.application.service.user.UserService;
+import com.finca.app.application.services.user.UserService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

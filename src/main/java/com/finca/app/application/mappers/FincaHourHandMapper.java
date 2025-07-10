@@ -1,9 +1,8 @@
 package com.finca.app.application.mappers;
 
 import com.finca.app.application.dto.FincaHourHnad.FincaHourHandDTORequest;
-import com.finca.app.application.service.finca.FincaService;
-import com.finca.app.application.service.finca.impl.FincaModelService;
-import com.finca.app.application.service.hourhand.impl.HourHandModelService;
+import com.finca.app.application.services.finca.impl.FincaModelService;
+import com.finca.app.application.services.hourhand.impl.HourHandModelService;
 import com.finca.app.domain.models.Finca;
 import com.finca.app.domain.models.Finca_HourHand;
 import com.finca.app.domain.models.HourHand;

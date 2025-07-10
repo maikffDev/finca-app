@@ -4,7 +4,7 @@ import com.finca.app.application.dto.commentary.ComentaryDtoRequest;
 import com.finca.app.application.dto.commentary.CommentaryDtoResponse;
 import com.finca.app.application.dto.finca.FincaDTORequest;
 import com.finca.app.application.dto.finca.FincaDTOResponse;
-import com.finca.app.application.service.commentary.CommentaryService;
+import com.finca.app.application.services.commentary.CommentaryService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;

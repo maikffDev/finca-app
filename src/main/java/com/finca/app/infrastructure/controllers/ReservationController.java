@@ -4,7 +4,7 @@ package com.finca.app.infrastructure.controllers;
 import com.finca.app.application.dto.reservation.ReservationDTORequest;
 import com.finca.app.application.dto.reservation.ReservationDTORequest2;
 import com.finca.app.application.dto.reservation.ReservationDTOResponse;
-import com.finca.app.application.service.reservation.ReservationService;
+import com.finca.app.application.services.reservation.ReservationService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
