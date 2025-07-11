@@ -27,19 +27,19 @@
  (2, 2);
 
  -- Amenidades
- INSERT INTO amenitie_entity (id, nombre, tipo_de_amenitie) VALUES
- (1, 'Pileta', 'Exterior'),
- (2, 'Quincho', 'Comedor'),
- (3, 'Estacionamiento', 'Accesibilidad');
+ --INSERT INTO amenitie_entity (id, nombre, tipo_de_amenitie) VALUES
+ --(1, 'Pileta', 'Exterior'),
+ --(2, 'Quincho', 'Comedor'),
+ --(3, 'Estacionamiento', 'Accesibilidad');
 
  -- Fincas
  INSERT INTO finca_entity (id, name, ubication, price_per_hour, user_id, description, active) VALUES
  (1, 'Finca El Sol', 'Mendoza', 1500.00, 1, 'Hermosa finca en la montaña', true);
 
  -- Relación finca - amenidad
- INSERT INTO amenitie_finca (finca_id, amenitie_id) VALUES
- (1, 1),
- (1, 2);
+ --INSERT INTO amenitie_finca (finca_id, amenitie_id) VALUES
+--(1, 1),
+ --(1, 2);
 
 -- Comentarios
  INSERT INTO commentary_entity (id, user_id, finca_id, description) VALUES

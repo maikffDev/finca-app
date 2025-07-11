@@ -55,4 +55,6 @@ public class FincaController {
     public FincaDTOResponse logicalDeletion(@PathVariable("id") Long fincaId){
         return fincaService.logicalDeletion(fincaId);
     }
+
+
 }
