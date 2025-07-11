@@ -1,15 +1,13 @@
 package com.finca.app.domain.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@Builder
 public class Finca {
     private Long id;
     private String name;
@@ -19,6 +17,8 @@ public class Finca {
     private String description;
     private boolean active;
     private User user;
+
+
 
     /*public Long getId() {
         return id;

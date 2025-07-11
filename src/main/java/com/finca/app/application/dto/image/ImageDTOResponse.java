@@ -1,5 +1,6 @@
-package com.finca.app.domain.models;
+package com.finca.app.application.dto.image;
 
+import com.finca.app.domain.models.Finca;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,9 +10,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Image {
+public class ImageDTOResponse {
 
     private Long id;
-    private Finca finca;
     private String urlImage;
+
 }

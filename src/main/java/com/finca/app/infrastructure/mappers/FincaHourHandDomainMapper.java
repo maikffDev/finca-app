@@ -19,6 +19,7 @@ public abstract class FincaHourHandDomainMapper {
 
     public  Finca_HourHand fromEntityToModel (FincaHourHandEntity fincaHourHandEntity) {
         return Finca_HourHand.builder()
+                .id(fincaHourHandEntity.getId())
                 .finca(fincaDomainMapper.toDomainModel(fincaHourHandEntity.getFinca()))
                 .hourHand(hourHandDomainMapper.toDomainModel(fincaHourHandEntity.getHourHandEntity()))
                 .reserved(fincaHourHandEntity.isReserved())
