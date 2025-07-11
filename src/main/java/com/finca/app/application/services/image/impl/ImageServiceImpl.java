@@ -1,15 +1,13 @@
-package com.finca.app.application.service.image.impl;
+package com.finca.app.application.services.image.impl;
 
 import com.finca.app.application.dto.finca.FincaDTORequest;
 import com.finca.app.application.dto.image.ImageDTORequest;
 import com.finca.app.application.dto.image.ImageDTOResponse;
 import com.finca.app.application.mappers.ImageDTOMapper;
-import com.finca.app.application.service.image.ImageService;
+import com.finca.app.application.services.image.ImageService;
 import com.finca.app.domain.models.Image;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
 @Service
 public class ImageServiceImpl implements ImageService {
 

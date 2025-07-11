@@ -1,20 +1,12 @@
 package com.finca.app.infrastructure.controllers;
 
-import com.finca.app.application.dto.finca.FincaDTORequest;
 import com.finca.app.application.dto.image.ImageDTORequest;
 import com.finca.app.application.dto.image.ImageDTOResponse;
-import com.finca.app.application.mappers.ImageDTOMapper;
-import com.finca.app.application.service.image.ImageService;
-import com.finca.app.domain.models.Image;
-import com.finca.app.domain.ports.out.ImageModelPort;
+import com.finca.app.application.services.image.ImageService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/images")

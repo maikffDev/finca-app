@@ -1,4 +1,4 @@
-package com.finca.app.application.service.image.impl;
+package com.finca.app.application.services.image.impl;
 
 import com.finca.app.domain.models.Image;
 import com.finca.app.domain.ports.in.image.CreateImageUseCase;

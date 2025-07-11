@@ -1,4 +1,4 @@
-package com.finca.app.application.service.image;
+package com.finca.app.application.services.image;
 
 import com.finca.app.application.dto.finca.FincaDTORequest;
 import com.finca.app.application.dto.image.ImageDTORequest;
