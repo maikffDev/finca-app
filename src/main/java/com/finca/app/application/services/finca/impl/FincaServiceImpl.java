@@ -10,6 +10,7 @@ import com.finca.app.infrastructure.exceptions.GenericNoContentException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class FincaServiceImpl implements FincaService {
@@ -21,6 +22,16 @@ public class FincaServiceImpl implements FincaService {
         this.fincaModelService = fincaModelService;
         this.fincaDTOMapper = fincaDTOMapper;
     }
+
+
+    @Override
+    public List<FincaDTOResponse> getAllAvailableFincas() {
+        List<Finca> listFincas = fincaModelService.getAllAvailableFincas();
+        return listFincas.stream()
+                .map(fincaDTOMapper::fromDomainToDtoResponseManual)
+                .collect(Collectors.toList());
+    }
+
 
     @Override
     public FincaDTOResponse create(FincaDTORequest fincaDto){
@@ -80,4 +91,6 @@ public class FincaServiceImpl implements FincaService {
         Finca disableFinca = fincaModelService.logicalDeletion(finca);
         return fincaDTOMapper.toDto(disableFinca);
     }
+
+
 }

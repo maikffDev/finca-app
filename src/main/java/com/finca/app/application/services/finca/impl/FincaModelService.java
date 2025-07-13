@@ -1,32 +1,33 @@
 package com.finca.app.application.services.finca.impl;
 
-import com.finca.app.application.usecases.finca.CreateFincaUseCaseImpl;
 import com.finca.app.domain.models.Finca;
-import com.finca.app.domain.ports.in.CreateFincaUseCase;
-import com.finca.app.domain.ports.in.DeleteFincaUseCase;
-import com.finca.app.domain.ports.in.FindFincaUseCase;
-import com.finca.app.domain.ports.in.UpdateFincaUseCase;
+import com.finca.app.domain.ports.in.finca.*;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
-public class FincaModelService implements CreateFincaUseCase, DeleteFincaUseCase, UpdateFincaUseCase, FindFincaUseCase {
+public class FincaModelService implements CreateFincaUseCase, DeleteFincaUseCase, UpdateFincaUseCase, FindFincaUseCase,GetAllAvailableFincasUseCase {
 
     //TODO, OJO ACA , definan implementaciones por defecto porque sino FincaModelService se autoInyecta por ser el unico BEAN que implemente las 4 interfaces iniciales, generando depedencia CIRCULAR. impiendo que compile
     // TODAS las implementaciones tienen que llevar la anotacion "Service" sino no se reconoce como un BEAN y no es tomado como opcion para ser INYECTADO
+
+
+    //TODO ojo aca, nose como sera en el ejemplo que tenemos de referencia pero no parece que este alineado a SOLID el hecho de un "UseCase" tenga mas de un metodo para mi no tiene sentido
 
     private final CreateFincaUseCase createFincaUseCase;
     private final DeleteFincaUseCase deleteFincaUseCase;
     private final UpdateFincaUseCase updateFincaUseCase;
     private final FindFincaUseCase findFincaUseCase;
+    private final GetAllAvailableFincasUseCase getAllAvailableFincasUseCase;
 
-    public FincaModelService(CreateFincaUseCase createFincaUseCase, DeleteFincaUseCase deleteFincaUseCase, UpdateFincaUseCase updateFincaUseCase, FindFincaUseCase findFincaUseCase){
+    public FincaModelService(CreateFincaUseCase createFincaUseCase, DeleteFincaUseCase deleteFincaUseCase, UpdateFincaUseCase updateFincaUseCase, FindFincaUseCase findFincaUseCase, GetAllAvailableFincasUseCase getAllAvailableFincasUseCase){
         this.createFincaUseCase = createFincaUseCase;
         this.deleteFincaUseCase = deleteFincaUseCase;
         this.updateFincaUseCase = updateFincaUseCase;
         this.findFincaUseCase = findFincaUseCase;
+        this.getAllAvailableFincasUseCase = getAllAvailableFincasUseCase;
     }
 
     @Override
@@ -63,4 +64,7 @@ public class FincaModelService implements CreateFincaUseCase, DeleteFincaUseCase
     public Finca update(Finca finca){
         return updateFincaUseCase.update(finca);
     }
+
+    @Override
+    public List<Finca> getAllAvailableFincas() {return  getAllAvailableFincasUseCase.getAllAvailableFincas();}
 }

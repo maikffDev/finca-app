@@ -17,6 +17,7 @@ public class Finca {
     private String description;
     private boolean active;
     private User user;
+    private List<Image> images;
 
 
 

@@ -10,14 +10,12 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Mapper(componentModel = "spring")
 public abstract class ImageDTOMapper {
-
-    @Autowired
-    FincaDTOMapper fincaDTOMapper;
 
 
     public  ImageDTOResponse fromDomainToDTOResponse(@NotNull Image image) {
@@ -47,10 +45,20 @@ public abstract class ImageDTOMapper {
     public  Image fromDTORequestToNewDomain(FincaDTORequest fincaDtoRequest, String urlImagee) {
 
         return Image.builder()
-                .finca(fincaDTOMapper.toModel(fincaDtoRequest))
+                //.finca(fincaDTOMapper.toModel(fincaDtoRequest)) //TODO OJO aca se mezclo logica de negocio con logica de mapeado, OJOTA
                 .urlImage(urlImagee)
                 .build();
     }
+
+    public List<String> toOnlyUrls (List<Image> images){
+
+        return images.stream()
+                .map(Image::getUrlImage)
+                .collect(Collectors.toList());
+
+    }
+
+
 
     /*public  List<ImageDTOResponse> toDTOResponseList(@NotNull  List<Image> images) {
         return images.stream()

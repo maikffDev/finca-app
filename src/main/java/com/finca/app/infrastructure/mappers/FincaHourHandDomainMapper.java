@@ -4,6 +4,7 @@ import com.finca.app.domain.models.Finca_HourHand;
 import com.finca.app.infrastructure.entities.FincaHourHandEntity;
 import org.mapstruct.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -12,6 +13,7 @@ import java.util.stream.Collectors;
 public abstract class FincaHourHandDomainMapper {
 
     @Autowired
+    @Lazy
     FincaDomainMapper fincaDomainMapper;
 
     @Autowired
@@ -31,6 +33,24 @@ public abstract class FincaHourHandDomainMapper {
         return entities.stream()
                 .map(this::fromEntityToModel)
                 .collect(Collectors.toList());
+    }
+
+    public Finca_HourHand toDomainWithoutFinca(FincaHourHandEntity e) {
+        return Finca_HourHand.builder()
+                .id(e.getId())
+                // solo datos propios
+                .hourHand(hourHandDomainMapper.toDomainModel(e.getHourHandEntity()))
+                .reserved(e.isReserved())
+                .pricePerHour(e.getPricePerHour())
+                .build();
+    }
+
+    /** Lista usando el mapeo ligero */
+    public List<Finca_HourHand> toDomainListWithoutFinca(List<FincaHourHandEntity> list) {
+        if (list == null || list.isEmpty()) return List.of();
+        return list.stream()
+                .map(this::toDomainWithoutFinca)
+                .toList();
     }
 
 }

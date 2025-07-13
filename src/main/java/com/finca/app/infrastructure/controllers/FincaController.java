@@ -2,6 +2,7 @@ package com.finca.app.infrastructure.controllers;
 
 import com.finca.app.application.dto.finca.FincaDTORequest;
 import com.finca.app.application.dto.finca.FincaDTOResponse;
+import com.finca.app.application.dto.reservation.ReservationDTOResponse;
 import com.finca.app.application.services.finca.FincaService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
@@ -29,6 +30,12 @@ public class FincaController {
     @GetMapping
     public List<FincaDTOResponse> getAll(){
         return fincaService.getAll();
+    }
+
+    @GetMapping("/all/available")
+    public ResponseEntity<List<FincaDTOResponse>> getAllAvailableFincas(){
+        List<FincaDTOResponse> response=fincaService.getAllAvailableFincas();
+        return ResponseEntity.ok(response);
     }
 
     @GetMapping("/{id}")

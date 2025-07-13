@@ -20,4 +20,6 @@ public interface FincaService {
     FincaDTOResponse delete(Long id);
 
     FincaDTOResponse logicalDeletion(Long id);
+
+    List<FincaDTOResponse> getAllAvailableFincas();
 }

@@ -1,6 +1,7 @@
 package com.finca.app.domain.ports.out;
 
 import com.finca.app.domain.models.Finca;
+import com.finca.app.infrastructure.entities.FincaEntity;
 
 import java.util.List;
 import java.util.Optional;
@@ -19,4 +20,6 @@ public interface FincaModelPort {
     Boolean delete(Long id);
 
     Finca logicalDeletion(Finca finca);
+
+    List<FincaEntity> getAllAvailableFincas();
 }

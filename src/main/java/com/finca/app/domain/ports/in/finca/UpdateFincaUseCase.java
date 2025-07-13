@@ -1,4 +1,4 @@
-package com.finca.app.domain.ports.in;
+package com.finca.app.domain.ports.in.finca;
 
 import com.finca.app.domain.models.Finca;
 

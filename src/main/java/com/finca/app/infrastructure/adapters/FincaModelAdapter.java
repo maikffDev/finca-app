@@ -29,6 +29,11 @@ public class FincaModelAdapter implements FincaModelPort {
     }
 
     @Override
+    public List<FincaEntity> getAllAvailableFincas() {
+        return jpaFincaRepository.findAllActiveWithFreeHourHand();
+    }
+
+    @Override
     public Finca save(Finca finca){
         try {
             if (jpaFincaRepository.existsByName(finca.getName())) {
@@ -95,4 +100,6 @@ public class FincaModelAdapter implements FincaModelPort {
         FincaEntity updatedFincaEntity = jpaFincaRepository.save(fincaEntity);
         return fincaDomainMapper.toDomainModel(updatedFincaEntity);
     }
+
+
 }
