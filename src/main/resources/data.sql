@@ -55,7 +55,7 @@
 
  -- Imágenes
  INSERT INTO image_entity (id, finca_id, url_image) VALUES
- (1, 1, 'https://example.com/img1.jpg');
+ (1, 1, 'https://ucarecdn.com/6d2901b5-633f-45ac-9e12-d7e21d06a7c2/-/preview/"');
 
  -- Horarios disponibles
  INSERT INTO hour_hand_entity (id, date, arrival_time, departure_time) VALUES
