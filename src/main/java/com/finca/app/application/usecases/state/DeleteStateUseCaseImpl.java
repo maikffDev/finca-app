@@ -3,7 +3,9 @@ package com.finca.app.application.usecases.state;
 import com.finca.app.domain.models.State;
 import com.finca.app.domain.ports.in.state.DeleteStateUseCase;
 import com.finca.app.domain.ports.out.StateModelPort;
+import org.springframework.stereotype.Service;
 
+@Service
 public class DeleteStateUseCaseImpl implements DeleteStateUseCase {
     private StateModelPort stateModelPort;
     @Override
@@ -11,8 +13,4 @@ public class DeleteStateUseCaseImpl implements DeleteStateUseCase {
         return stateModelPort.deleteById(id);
     }
 
-    @Override
-    public State logicalDeletion(State state) {
-        return stateModelPort.logicalDeletion(state);
-    }
 }

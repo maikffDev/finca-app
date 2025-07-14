@@ -11,6 +11,5 @@ public interface StateModelPort {
     Optional<State> findById(Long id);
     List<State> findAll();
     boolean deleteById(Long id);
-    State logicalDeletion(State state);
     State update(State state);
 }

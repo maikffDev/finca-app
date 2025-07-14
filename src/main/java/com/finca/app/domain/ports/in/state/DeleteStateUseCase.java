@@ -6,5 +6,4 @@ public interface DeleteStateUseCase {
 
     boolean delete(Long id);
 
-    State logicalDeletion(State state);
 }

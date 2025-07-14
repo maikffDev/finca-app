@@ -6,7 +6,7 @@ import com.finca.app.application.mappers.StateDTOMapper;
 import com.finca.app.domain.models.State;
 import com.finca.app.infrastructure.exceptions.GenericErrorException;
 import org.springframework.stereotype.Service;
-import com.finca.app.application.services.state.impl.StateModelService;
+import com.finca.app.application.services.state.StateModelService;
 import java.util.List;
 
 @Service
