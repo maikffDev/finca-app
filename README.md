@@ -5,6 +5,9 @@
 - Michael, Fernandez
 - Matias, Strano
 - Jonatan, Arroyo
+- Gonzalo, Mancebo
+- Lautaro, Miras
+- Martin, Alderete
   
 ### Descripción del Proyecto
 Este proyecto es una aplicación diseñada para simplificar el proceso de reserva y gestión de fincas, casas rurales o propiedades vacacionales. Permite a los propietarios publicar sus fincas con detalles completos, y a los usuarios buscar, explorar y reservar propiedades según sus preferencias

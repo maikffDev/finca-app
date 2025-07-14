@@ -12,3 +12,4 @@ public interface FindFincaUseCase {
 
     Optional<Finca> getByUsername(String username);
 }
+

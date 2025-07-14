@@ -1,5 +1,4 @@
-package com.finca.app.domain.models;
-
+package com.finca.app.application.dto.state;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class State {
+public class StateDTOResponse {
     private Long id;
     private String description;
 }
