@@ -33,8 +33,8 @@
  --(3, 'Estacionamiento', 'Accesibilidad');
 
  -- Fincas
- INSERT INTO finca_entity (id, name, ubication, price_per_hour, user_id, description, active) VALUES
- (1, 'Finca El Sol', 'Mendoza', 1500.00, 1, 'Hermosa finca en la montaña', true);
+ INSERT INTO finca_entity ( name, ubication, price_per_hour, user_id, description, active) VALUES
+ ( 'Finca El Sol', 'Mendoza', 1500.00, 1, 'Hermosa finca en la montaña', true);
 
  -- Relación finca - amenidad
  --INSERT INTO amenitie_finca (finca_id, amenitie_id) VALUES
