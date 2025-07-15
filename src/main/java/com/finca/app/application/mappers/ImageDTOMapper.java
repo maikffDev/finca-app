@@ -10,6 +10,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -52,10 +53,13 @@ public abstract class ImageDTOMapper {
 
     public List<String> toOnlyUrls (List<Image> images){
 
+        if (images != null) {
+
         return images.stream()
                 .map(Image::getUrlImage)
                 .collect(Collectors.toList());
-
+        }
+        return new ArrayList<>();
     }
 
 

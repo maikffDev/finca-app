@@ -1,14 +1,11 @@
 package com.finca.app.infrastructure.entities;
 
-import com.finca.app.domain.models.Schedule;
 import jakarta.persistence.*;
 import lombok.*;
 
 
 import java.util.ArrayList;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 import java.util.Set;
 
 @AllArgsConstructor
