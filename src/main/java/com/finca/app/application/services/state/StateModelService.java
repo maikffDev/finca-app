@@ -1,4 +1,4 @@
-package com.finca.app.application.services.state.impl;
+package com.finca.app.application.services.state;
 
 import com.finca.app.domain.models.State;
 import com.finca.app.domain.ports.in.state.CreateStateUseCase;
@@ -31,9 +31,10 @@ public class StateModelService implements CreateStateUseCase, DeleteStateUseCase
     }
 
     @Override
-    public Boolean delete(Long id) {
+    public boolean delete(Long id) {
         return deleteStateUseCase.delete(id);
     }
+
 
     @Override
     public List<State> getAll() {

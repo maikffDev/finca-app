@@ -6,10 +6,12 @@ import com.finca.app.domain.ports.in.state.FindStateUseCase;
 import com.finca.app.domain.ports.out.StateModelPort;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class FindStateUseCaseImpl implements FindStateUseCase {
     private StateModelPort stateModelPort;
     @Override

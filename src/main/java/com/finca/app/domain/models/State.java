@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -12,4 +14,5 @@ import lombok.NoArgsConstructor;
 public class State {
     private Long id;
     private String description;
+    private List<StateHistory> historyList;
 }
